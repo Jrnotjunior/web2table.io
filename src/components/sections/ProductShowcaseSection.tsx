@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BarChart3, Check, ChefHat, CircleDollarSign, ClipboardList, CreditCard, Package, Search, ShoppingBag, Store, Truck, Users } from 'lucide-react'
+import { BarChart3, Check, ChefHat, CircleDollarSign, ClipboardList, CreditCard, Package, Search, Store, Truck, Users } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
 
 const views = [
