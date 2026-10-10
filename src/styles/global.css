@@ -733,7 +733,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 
 
 /* Workflow section finishing pass: clearer steps and consistent palette. */
-.workflow-section { color: var(--white); background: var(--black); }
+
 .workflow-section .workflow-copy .eyebrow { color: var(--white); }
 .workflow-section .workflow-copy > p { color: var(--text-secondary); }
 .workflow-section .workflow-footnote { color: var(--text-secondary); }
