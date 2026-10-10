@@ -560,13 +560,13 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 
 
 /* Solutions section: role-based cards, consistent with the black/white/red brand. */
-.solutions-section { background: #f7f7f5; }
+.solutions-section { background: #000000; }
 .solutions-section .centered-heading { max-width: 720px; margin-right: auto; margin-left: auto; }
 .solutions-role-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.solution-role-card { display: flex; min-height: 310px; flex-direction: column; align-items: flex-start; padding: 22px 21px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; transition: background .2s ease, transform .2s ease; }
-.solution-role-card:hover { background: #fffafa; }
+.solution-role-card { display: flex; min-height: 310px; flex-direction: column; align-items: flex-start; padding: 22px 21px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #000000; transition: background .2s ease, transform .2s ease; }
+.solution-role-card:hover { background: #111111; }
 .solution-role-top { display: flex; width: 100%; align-items: center; justify-content: space-between; margin-bottom: 21px; }
-.solution-role-icon { display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid #ffd9dc; border-radius: 7px; color: #ED1C24; background: #fff4f4; }
+.solution-role-icon { display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid #ffd9dc; border-radius: 7px; color: #ED1C24; background: #000000; }
 .solution-role-number { color: #a0a0a0; font-size: 10px; font-weight: 700; letter-spacing: .1em; }
 .solution-role-label { margin-bottom: 9px; color: #ED1C24; font-size: 9px; font-weight: 800; letter-spacing: .11em; }
 .solution-role-card h3 { margin: 0 0 10px; color: #111; font-size: 19px; line-height: 1.3; letter-spacing: -.035em; }
@@ -576,7 +576,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .solution-role-card li svg { flex: 0 0 auto; color: #ED1C24; }
 .solution-role-card > a { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 12px; border-top: 1px solid #ededed; width: 100%; color: #111; font-size: 10px; font-weight: 700; transition: color .2s ease; }
 .solution-role-card > a:hover { color: #ED1C24; }
-.solutions-bottom-note { display: flex; align-items: center; gap: 15px; margin-top: 24px; padding: 20px 22px; border: 1px solid var(--line); background: #fff; }
+.solutions-bottom-note { display: flex; align-items: center; gap: 15px; margin-top: 24px; padding: 20px 22px; border: 1px solid var(--line); background: #000000; }
 .solutions-bottom-note > span { display: grid; width: 40px; height: 40px; flex: 0 0 auto; place-items: center; border-radius: 6px; color: #fff; background: #ED1C24; }
 .solutions-bottom-note p { flex: 1; margin: 0; color: #656565; font-size: 11px; line-height: 1.7; }
 .solutions-bottom-note p strong { color: #111; font-size: 12px; }
