@@ -631,12 +631,6 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 
 
 
-.solutions-section .solutions-bottom-note p { color: var(--text-secondary); }
-.solutions-section .solutions-bottom-note p strong { color: var(--white); }
-.solutions-section .solutions-bottom-note > a { color: var(--white); }
-.solutions-section .solutions-bottom-note > a:hover { color: var(--accent); }
-
-
 /* Platform section: preserve black surfaces and improve card text contrast. */
 .platform-section .section-heading h2 { color: var(--white); }
 .platform-section .section-heading h2 span { color: var(--accent); }
