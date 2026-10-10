@@ -636,3 +636,20 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .about-section .about-note small { color: #d0d0d0; }
 .about-section .about-note-icon { color: #ED1C24; border: 1px solid rgba(237,28,36,.55); background: #000000; }
 .about-section .about-art > img { background: #000000; }
+
+
+/* Contact CTA: consistent black, white and red brand palette. */
+.contact-section { background: #000000; color: #ffffff; }
+.contact-section .contact-panel { color: #ffffff; border-color: rgba(255,255,255,.2); background: #000000; }
+.contact-section .contact-content h2 { color: #ffffff; }
+.contact-section .contact-content h2 span { color: #ED1C24; }
+.contact-section .contact-content > p,
+.contact-section .contact-content > small { color: #d0d0d0; }
+.contact-section .contact-content .eyebrow { color: #ffffff; }
+.contact-section .contact-content .button-lime { color: #ffffff; border-color: #ED1C24; background: #ED1C24; }
+.contact-section .contact-content .button-lime:hover { color: #ffffff; background: #c9161d; }
+.contact-section .contact-decoration span,
+.contact-section .contact-orbit { border-color: rgba(255,255,255,.18); }
+.contact-section .contact-center { color: #ED1C24; border-color: rgba(237,28,36,.55); background: #000000; }
+.contact-section .contact-center span { color: #ffffff; }
+.contact-section .orbit-node { color: #ED1C24; border-color: rgba(237,28,36,.55); background: #000000; }
