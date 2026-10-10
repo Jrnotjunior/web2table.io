@@ -608,3 +608,17 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .solutions-section .solutions-bottom-note p strong { color: #ffffff; }
 .solutions-section .solutions-bottom-note > a { color: #ffffff; }
 .solutions-section .solutions-bottom-note > a:hover { color: #ED1C24; }
+
+
+/* Platform section: preserve black surfaces and improve card text contrast. */
+.platform-section .section-heading h2 { color: #ffffff; }
+.platform-section .section-heading h2 span { color: #ED1C24; }
+.platform-section .section-heading > p { color: #d0d0d0; }
+.platform-section .capability-card h3 { color: #ffffff; }
+.platform-section .capability-card p { color: #d0d0d0; }
+.platform-section .capability-card > a { color: #ED1C24; border-color: rgba(255,255,255,.25); background: #000000; }
+.platform-section .capability-card > a:hover { color: #ffffff; border-color: #ED1C24; background: #ED1C24; }
+.platform-section .capability-icon { color: #ED1C24; border-color: rgba(237,28,36,.55); background: #000000; }
+.platform-section .capability-number { color: #ffffff; }
+.platform-section .capability-card { background: #000000; }
+.platform-section .capability-card:hover { background: #111111; }
