@@ -304,7 +304,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .brand-light .brand-mark span { background: #ED1C24; }
 .footer-links a:hover { color: #ED1C24; }
 .button-dark, .nav-cta { color: #ffffff; background: #ED1C24; }
-.button-dark:hover, .nav-cta:hover { color: #ffffff; background: #ffffff; }
+.button-dark:hover, .nav-cta:hover { color: #ffffff; background: #ED1C24; filter: brightness(.92); }
 .button-light { color: #000000; background: #ffffff; }
 .button-light:hover { color: #ffffff; background: #ED1C24; }
 .button-lime { color: #ffffff; background: #ED1C24; }
