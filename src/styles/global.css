@@ -344,8 +344,6 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .contact-decoration span, .contact-orbit { border-color: rgba(255,255,255,.18); }
 .contact-center { border-color: rgba(237,28,36,.5); background: var(--black); }
 .site-footer { color: var(--white); background: var(--black); border-top: 2px solid var(--accent); }
-.brand-light .brand-mark span { background: var(--accent); }
-.footer-links a:hover { color: var(--accent); }
 .nav-cta { color: var(--white); background: var(--accent); }
 .nav-cta:hover { color: var(--white); background: var(--accent); filter: brightness(.92); }
 @media (max-width: 760px) {
