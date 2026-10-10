@@ -27,7 +27,7 @@ export default function SolutionsSection() {
           <h3>{title}</h3>
           <p>{description}</p>
           <ul>{points.map(point => <li key={point}><Check size={14} />{point}</li>)}</ul>
-          <a href="#product-showcase" aria-label={`Explore product preview for ${role.toLowerCase()}`}>Explore preview <ArrowUpRight size={15} /></a>
+          <a href="#product-tour" aria-label={`Explore product preview for ${role.toLowerCase()}`}>Explore preview <ArrowUpRight size={15} /></a>
         </article>)}
       </div>
       <div className="solutions-bottom-note"><span><Store size={17} /></span><p><strong>One restaurant. Connected workflows.</strong><br />The goal is to help each role do its part while orders move through the same operation.</p><a href="#how-it-works">See how it works <ArrowUpRight size={16} /></a></div>
