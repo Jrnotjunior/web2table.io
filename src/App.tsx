@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from 'react'
-import { ArrowDownRight, ArrowRight, Check, CircleCheck, Clock3, CookingPot, CreditCard, Menu, MonitorSmartphone, MoveUpRight, PackageCheck, ShoppingBag, Sparkles, Store, Truck, Users, X } from 'lucide-react'
+import { ArrowDownRight, ArrowRight, Check, CircleCheck, Clock3, CookingPot, CreditCard, Menu, MonitorSmartphone, MoveUpRight, ShoppingBag, Sparkles, Store, Truck, X } from 'lucide-react'
 import './styles/app.css'
 
 import { capabilities, navigationItems as navigation, platformUrl as appUrl, workflowSteps as steps } from './content/siteContent'\n\nfunction Brand({ light = false }: { light?: boolean }) {
