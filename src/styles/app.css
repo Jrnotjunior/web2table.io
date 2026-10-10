@@ -677,3 +677,23 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .hero .hero-bottom { color: #d0d0d0; border-top-color: rgba(255,255,255,.2); }
 .hero .workflow-line i { background: #ED1C24; }
 .hero .workflow-line b { color: #ffffff; }
+
+
+/* Product showcase: ensure every preview uses the approved black, white and red palette. */
+.product-showcase-section { color: #ffffff; background: #000000; }
+.product-showcase-section .section-heading h2 { color: #ffffff; }
+.product-showcase-section .section-heading h2 span { color: #ED1C24; }
+.product-showcase-section .section-heading > p { color: #d0d0d0; }
+.product-showcase-section .showcase-feature,
+.product-showcase-section .showcase-preview,
+.product-showcase-section .showcase-screen { color: #ffffff; border-color: rgba(255,255,255,.2); background: #000000; }
+.product-showcase-section .showcase-copy h3 { color: #ffffff; }
+.product-showcase-section .showcase-copy p { color: #d0d0d0; }
+.product-showcase-section .showcase-tab { color: #ffffff; border-color: rgba(255,255,255,.25); background: #000000; }
+.product-showcase-section .showcase-tab:hover,
+.product-showcase-section .showcase-tab:focus-visible { color: #ffffff; border-color: #ED1C24; background: #000000; }
+.product-showcase-section .showcase-tab.is-active { color: #ffffff; border-color: #ED1C24; background: #ED1C24; }
+.product-showcase-section .showcase-eyebrow,
+.product-showcase-section .showcase-text-link { color: #ED1C24; }
+.product-showcase-section .showcase-text-link:hover { color: #ffffff; }
+.product-showcase-section .showcase-disclaimer { color: #bdbdbd; }
