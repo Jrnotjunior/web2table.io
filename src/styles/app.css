@@ -336,8 +336,8 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 
 /* Official Web2Table logo asset */
 .brand { display: inline-flex; align-items: center; flex: 0 0 auto; }
-.brand-logo { display: block; width: 188px; max-width: 100%; height: auto; object-fit: contain; }
-.site-footer .brand-logo { width: 188px; }
+.brand-logo { display: block; width: 145px; max-width: 100%; height: auto; object-fit: contain; }
+.site-footer .brand-logo { width: 145px; }
 @media (max-width: 760px) {
-  .brand-logo, .site-footer .brand-logo { width: 158px; }
+  .brand-logo, .site-footer .brand-logo { width: 124px; }
 }
