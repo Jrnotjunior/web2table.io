@@ -17,8 +17,6 @@
   --accent-hover: #c9161d;
   --text-secondary: #d0d0d0;
   --border-subtle: rgba(255,255,255,.2);
-  --green: var(--accent);
-  --green-dark: var(--black);
   --line: var(--border-subtle);
   --serif: 'Montserrat', sans-serif;
 }
@@ -123,7 +121,7 @@ p { color: var(--muted); line-height: 1.75; }
 .team-card small { color: #83897f; font-size: 9px; }
 .team-check { width: 22px; height: 22px; display: grid; place-items: center; margin-left: 5px; border-radius: 50%; color: var(--white); background: var(--accent); }
 .visual-stamp { position: absolute; right: 20px; top: 0; display: flex; align-items: center; gap: 8px; padding: 12px 15px; border-radius: 8px; color: var(--white); background: var(--black); font-size: 10px; font-weight: 600; line-height: 1.45; }
-.visual-stamp svg { color: var(--green); }
+.visual-stamp svg { color: var(--accent); }
 .hero-bottom { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 22px; border-top: 1px solid var(--line); color: #81877d; font-size: 9px; font-weight: 700; letter-spacing: .13em; }
 .workflow-line { display: flex; align-items: center; gap: 12px; color: #51594b; font-size: 10px; letter-spacing: 0; }
 .workflow-line i { width: 30px; height: 1px; background: #c9d0bf; }
@@ -293,15 +291,7 @@ p { color: var(--muted); line-height: 1.75; }
 }
 
 /* Web2Table approved brand system: black, white, and red only. */
-:root {
-  --ink: var(--black);
-  --muted: var(--white);
-  --paper: var(--black);
-  --white: var(--white);
-  --green: var(--accent);
-  --green-dark: var(--black);
-  --line: rgba(255,255,255,.18);
-}
+/* Brand tokens are defined once in the root block at the top of this file. */
 body, .site-header, .main-nav, .platform-section, .solutions-section,
 .about-section, .contact-section, .solution-card, .floating-card,
 .about-note, .capability-card, .contact-panel {
