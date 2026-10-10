@@ -596,3 +596,15 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 }
 
 
+
+
+/* Readability fix: white text on the black Solutions cards. */
+.solutions-section .solution-role-card h3 { color: #ffffff; }
+.solutions-section .solution-role-card > p { color: #d0d0d0; }
+.solutions-section .solution-role-card li { color: #d0d0d0; }
+.solutions-section .solution-role-card > a { color: #ffffff; border-top-color: rgba(255,255,255,.25); }
+.solutions-section .solution-role-card > a:hover { color: #ED1C24; }
+.solutions-section .solutions-bottom-note p { color: #d0d0d0; }
+.solutions-section .solutions-bottom-note p strong { color: #ffffff; }
+.solutions-section .solutions-bottom-note > a { color: #ffffff; }
+.solutions-section .solutions-bottom-note > a:hover { color: #ED1C24; }
