@@ -594,3 +594,9 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   .solutions-bottom-note p { min-width: calc(100% - 60px); }
   .solutions-bottom-note > a { margin-left: 55px; }
 }
+
+
+/* Fix Solutions heading contrast against its light section background. */
+.solutions-section .section-heading h2 { color: #111111; }
+.solutions-section .section-heading h2 span { color: #ED1C24; }
+.solutions-section .section-heading > p { color: #626262; }
