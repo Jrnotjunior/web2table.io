@@ -729,9 +729,6 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .mobile-menu:hover, .mobile-menu:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
 @media (max-width: 760px) {
   .main-nav { border: 1px solid rgba(255,255,255,.18); background: var(--black); }
-  .main-nav a { color: var(--white); }
-  .main-nav a:hover, .main-nav a:focus-visible { color: var(--accent); }
-  .main-nav .nav-cta { color: var(--white); background: var(--accent); }
 }
 
 
