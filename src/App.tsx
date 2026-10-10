@@ -7,7 +7,6 @@ import WorkflowSection from './components/sections/WorkflowSection'
 import SolutionsSection from './components/sections/SolutionsSection'
 import AboutSection from './components/sections/AboutSection'
 import ContactSection from './components/sections/ContactSection'
-import './styles/app.css'
 
 export default function App() {
   return (
