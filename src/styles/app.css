@@ -300,7 +300,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .contact-panel { border: 1px solid rgba(255,255,255,.18); background: #000000; }
 .contact-decoration span, .contact-orbit { border-color: rgba(255,255,255,.18); }
 .contact-center { border-color: rgba(237,28,36,.5); background: #000000; }
-.site-footer { color: #ffffff; background: #000000; }
+.site-footer { color: #ffffff; background: #000000; border-top: 2px solid #ED1C24; }
 .brand-light .brand-mark span { background: #ED1C24; }
 .footer-links a:hover { color: #ED1C24; }
 .button-dark, .nav-cta { color: #ffffff; background: #ED1C24; }
