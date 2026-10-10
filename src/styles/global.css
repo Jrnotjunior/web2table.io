@@ -23,6 +23,8 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+/* Keep every in-page navigation target aligned consistently below the sticky header. */
+main section[id] { scroll-margin-top: 90px; }
 body { margin: 0; min-width: 320px; }
 body, button, a { -webkit-tap-highlight-color: transparent; }
 body, button, input, textarea, select { font-family: var(--font-sans); }
