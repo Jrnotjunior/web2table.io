@@ -341,3 +341,17 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 @media (max-width: 760px) {
   .brand-logo, .site-footer .brand-logo { width: 124px; }
 }
+
+
+/* Small, balanced logo and clear red navigation hover state. */
+.brand-logo { width: 100px; }
+.site-footer .brand-logo { width: 100px; }
+.main-nav > a:not(.nav-cta) { transition: color .18s ease; }
+.main-nav > a:not(.nav-cta):hover,
+.main-nav > a:not(.nav-cta):focus-visible { color: #ED1C24; }
+.footer-links a { transition: color .18s ease; }
+.footer-links a:hover,
+.footer-links a:focus-visible { color: #ED1C24; }
+@media (max-width: 760px) {
+  .brand-logo, .site-footer .brand-logo { width: 88px; }
+}
