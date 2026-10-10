@@ -2,31 +2,7 @@ import { useState, type ReactNode } from 'react'
 import { ArrowDownRight, ArrowRight, Check, CircleCheck, Clock3, CookingPot, CreditCard, Menu, MonitorSmartphone, MoveUpRight, PackageCheck, ShoppingBag, Sparkles, Store, Truck, Users, X } from 'lucide-react'
 import './styles/app.css'
 
-const appUrl = 'https://jrnotjunior.github.io/restaurant-ordering-platform/'
-
-const navigation = [
-  { label: 'Platform', href: '#platform' },
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'How it works', href: '#how-it-works' },
-  { label: 'About', href: '#about' },
-]
-
-const capabilities = [
-  { icon: ShoppingBag, number: '01', title: 'Online ordering', description: 'Give customers a simple way to discover your menu and place orders, wherever they are.' },
-  { icon: CreditCard, number: '02', title: 'Point of sale', description: 'Bring walk-in sales, payments, receipts, and day-to-day counter service into one flow.' },
-  { icon: CookingPot, number: '03', title: 'Kitchen workflow', description: 'Help the kitchen see what needs to be prepared and keep order handoffs clear.' },
-  { icon: Truck, number: '04', title: 'Dispatch & delivery', description: 'Coordinate pickup and delivery handoffs with a clearer view of order progress.' },
-  { icon: Users, number: '05', title: 'Team access', description: 'Give owners and staff the tools they need, with access based on their role.' },
-  { icon: Store, number: '06', title: 'Restaurant management', description: 'Manage products, employees, and sales from a connected restaurant workspace.' },
-]
-
-const steps = [
-  { icon: ShoppingBag, title: 'An order comes in', text: 'Customers order online or your cashier enters an in-store order.' },
-  { icon: CookingPot, title: 'The team gets to work', text: 'The kitchen prepares the order while the front of house handles payment and service.' },
-  { icon: PackageCheck, title: 'Ready for handoff', text: 'Staff can follow the order through preparation, pickup, and dispatch.' },
-]
-
-function Brand({ light = false }: { light?: boolean }) {
+import { capabilities, navigationItems as navigation, platformUrl as appUrl, workflowSteps as steps } from './content/siteContent'\n\nfunction Brand({ light = false }: { light?: boolean }) {
   return <a className={`brand ${light ? 'brand-light' : ''}`} href="#home" aria-label="Web2Table home"><span className="brand-mark"><span /><span /><span /></span><span>web<span>2</span>table</span></a>
 }
 
