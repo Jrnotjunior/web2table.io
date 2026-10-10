@@ -243,7 +243,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   background-color: #000000;
 }
 .site-header {
-  border-bottom-color: rgba(255,255,255,.16);
+  border-bottom: 2px solid #ED1C24;
   background: rgba(0,0,0,.94);
 }
 .main-nav > a:not(.nav-cta), .hero-note, .hero-bottom,
