@@ -596,32 +596,3 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 }
 
 
-/* Fix Solutions heading contrast against its light section background. */
-.solutions-section .section-heading h2 { color: #111111; }
-.solutions-section .section-heading h2 span { color: #ED1C24; }
-.solutions-section .section-heading > p { color: #626262; }
-
-
-/* Solutions section contrast and consistent section surfaces. */
-.solutions-section { background: #f7f7f5; color: #111111; }
-.solutions-section .section-heading h2 { color: #111111; }
-.solutions-section .section-heading h2 span { color: #ED1C24; }
-.solutions-section .section-heading > p { color: #626262; }
-.solutions-section .section-heading .eyebrow { color: #111111; }
-.solutions-section .solution-role-card { background: #ffffff; color: #111111; }
-.solutions-section .solution-role-card h3 { color: #111111; }
-.solutions-section .solution-role-card > p { color: #626262; }
-.solutions-section .solution-role-card li { color: #454545; }
-.solutions-section .solution-role-card > a { color: #111111; }
-.solutions-section .solutions-bottom-note { background: #ffffff; color: #111111; }
-.solutions-section .solutions-bottom-note p { color: #626262; }
-.solutions-section .solutions-bottom-note p strong { color: #111111; }
-.solutions-section .solutions-bottom-note > a { color: #111111; }
-
-/* Keep dark surfaces intentional, while preventing text selection from looking like stray black blocks. */
-::selection { color: #ffffff; background: #ED1C24; }
-.site-footer, .site-footer * { text-shadow: none; }
-.main-nav > a:not(.nav-cta) { background: transparent; }
-.main-nav > a:not(.nav-cta):hover,
-.main-nav > a:not(.nav-cta):focus-visible,
-.main-nav > a[aria-current="page"] { color: #ED1C24; background: transparent; }
