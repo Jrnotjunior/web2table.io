@@ -697,3 +697,19 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .product-showcase-section .showcase-text-link { color: #ED1C24; }
 .product-showcase-section .showcase-text-link:hover { color: #ffffff; }
 .product-showcase-section .showcase-disclaimer { color: #bdbdbd; }
+
+
+/* Header and navigation polish: approved black, white and red palette only. */
+.site-header { color: #ffffff; background: rgba(0,0,0,.96); border-bottom: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(16px); }
+.main-nav a { color: #ffffff; transition: color .18s ease, border-color .18s ease, background .18s ease; }
+.main-nav a:hover, .main-nav a:focus-visible { color: #ED1C24; }
+.main-nav .nav-cta { color: #ffffff; border: 1px solid #ED1C24; background: #ED1C24; }
+.main-nav .nav-cta:hover, .main-nav .nav-cta:focus-visible { color: #ffffff; border-color: #ffffff; background: #000000; }
+.mobile-menu { color: #ffffff; border: 1px solid rgba(255,255,255,.22); border-radius: 4px; }
+.mobile-menu:hover, .mobile-menu:focus-visible { color: #ED1C24; border-color: #ED1C24; outline: none; }
+@media (max-width: 760px) {
+  .main-nav { border: 1px solid rgba(255,255,255,.18); background: #000000; }
+  .main-nav a { color: #ffffff; }
+  .main-nav a:hover, .main-nav a:focus-visible { color: #ED1C24; }
+  .main-nav .nav-cta { color: #ffffff; background: #ED1C24; }
+}
