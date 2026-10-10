@@ -298,10 +298,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   color: var(--white);
   background-color: var(--black);
 }
-.site-header {
-  border-bottom: 2px solid var(--accent);
-  background: rgba(0,0,0,.94);
-}
+/* Header colors and border are centralized in the header polish rules below. */
 .main-nav > a:not(.nav-cta), .hero-note, .hero-bottom,
 .capability-number, .step-index, .step-copy p, .solution-body li,
 .about-note small, .footer-brand p, .footer-links a,
