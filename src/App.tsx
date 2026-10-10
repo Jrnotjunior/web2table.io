@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { ArrowDownRight, ArrowRight, Check, ChevronDown, CircleCheck, Clock3, CookingPot, CreditCard, Menu, MonitorSmartphone, MoveUpRight, PackageCheck, ShoppingBag, Sparkles, Store, Truck, Users, X } from 'lucide-react'
+import { useState, type ReactNode } from 'react'
+import { ArrowDownRight, ArrowRight, Check, CircleCheck, Clock3, CookingPot, CreditCard, Menu, MonitorSmartphone, MoveUpRight, PackageCheck, ShoppingBag, Sparkles, Store, Truck, Users, X } from 'lucide-react'
 import './styles/app.css'
 
 const appUrl = 'https://jrnotjunior.github.io/restaurant-ordering-platform/'
@@ -44,7 +44,7 @@ function Header() {
   </header>
 }
 
-function SectionEyebrow({ children }: { children: React.ReactNode }) {
+function SectionEyebrow({ children }: { children: ReactNode }) {
   return <div className="eyebrow"><span />{children}</div>
 }
 
