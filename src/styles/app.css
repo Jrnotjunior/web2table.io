@@ -225,3 +225,91 @@
   .footer-links { gap: 42px; }
   .footer-bottom { flex-direction: column; gap: 8px; }
 }
+
+/* Web2Table approved brand system: black, white, and red only. */
+:root {
+  --ink: #000000;
+  --muted: #ffffff;
+  --paper: #000000;
+  --white: #ffffff;
+  --green: #ED1C24;
+  --green-dark: #000000;
+  --line: rgba(255,255,255,.18);
+}
+body, .site-header, .main-nav, .platform-section, .solutions-section,
+.about-section, .contact-section, .solution-card, .floating-card,
+.about-note, .capability-card, .contact-panel {
+  color: #ffffff;
+  background-color: #000000;
+}
+.site-header {
+  border-bottom-color: rgba(255,255,255,.16);
+  background: rgba(0,0,0,.94);
+}
+.main-nav > a:not(.nav-cta), .hero-note, .hero-bottom,
+.capability-number, .step-index, .step-copy p, .solution-body li,
+.about-note small, .footer-brand p, .footer-links a,
+.footer-links > div > span, .footer-bottom {
+  color: #ffffff;
+}
+.hero, .platform-section, .solutions-section, .about-section, .contact-section {
+  background: #000000;
+}
+.hero-glow { display: none; }
+.visual-image, .solution-image, .about-art > img {
+  background: #000000;
+}
+.visual-image::after, .solution-image::after {
+  background: linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.72));
+}
+.floating-card, .about-note {
+  border-color: rgba(255,255,255,.18);
+  color: #ffffff;
+  background: #000000;
+  box-shadow: none;
+}
+.order-icon, .order-icon-orange, .capability-icon, .step-icon,
+.about-note-icon, .contact-center, .orbit-node {
+  color: #ED1C24;
+  border-color: rgba(237,28,36,.55);
+  background: #000000;
+}
+.status-dot, .mini-live, .check-icon, .note-icon, .visual-stamp svg,
+.workflow-line i:first-child, .workflow-copy h2 span, .workflow-footnote svg,
+.step-icon, .workflow-copy h2 span, .contact-content h2 span,
+.contact-center, .orbit-node, .capability-icon, .capability-card > a,
+.solution-body li svg, .brand-word > span, .brand > span:last-child > span {
+  color: #ED1C24;
+}
+.order-divider, .capability-grid, .capability-card, .steps-list,
+.step-row, .solution-card, .footer-bottom {
+  border-color: rgba(255,255,255,.18);
+}
+.capability-grid { border-top-color: rgba(255,255,255,.18); border-left-color: rgba(255,255,255,.18); }
+.capability-card { background: #000000; }
+.capability-card:hover { background: #111111; }
+.capability-card > a:hover { color: #ffffff; background: #ED1C24; }
+.step-icon { background: #000000; }
+.step-index, .step-arrow, .muted-icon, .team-avatars span { color: #ffffff; }
+.team-avatars span, .team-avatars span:nth-child(2), .team-avatars span:nth-child(3) {
+  color: #ffffff;
+  border-color: #000000;
+  background: #000000;
+}
+.team-check, .steps-bottom-mark { color: #ffffff; background: #ED1C24; }
+.contact-panel { border: 1px solid rgba(255,255,255,.18); background: #000000; }
+.contact-decoration span, .contact-orbit { border-color: rgba(255,255,255,.18); }
+.contact-center { border-color: rgba(237,28,36,.5); background: #000000; }
+.site-footer { color: #ffffff; background: #000000; }
+.brand-light .brand-mark span { background: #ED1C24; }
+.footer-links a:hover { color: #ED1C24; }
+.button-dark, .nav-cta { color: #ffffff; background: #ED1C24; }
+.button-dark:hover, .nav-cta:hover { color: #ffffff; background: #ffffff; }
+.button-light { color: #000000; background: #ffffff; }
+.button-light:hover { color: #ffffff; background: #ED1C24; }
+.button-lime { color: #ffffff; background: #ED1C24; }
+.button-lime:hover { color: #000000; background: #ffffff; }
+@media (max-width: 760px) {
+  .main-nav { background: #000000; border-bottom-color: rgba(255,255,255,.18); }
+  .main-nav > a:not(.nav-cta) { border-bottom-color: rgba(255,255,255,.18); }
+}
