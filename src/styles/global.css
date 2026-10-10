@@ -331,7 +331,6 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 }
 .capability-grid { border-top-color: rgba(255,255,255,.18); border-left-color: rgba(255,255,255,.18); }
 .capability-card { background: var(--black); }
-.capability-card:hover { background: var(--black); }
 .capability-card > a:hover { color: var(--white); background: var(--accent); }
 .step-icon { background: var(--black); }
 .step-index, .step-arrow, .muted-icon, .team-avatars span { color: var(--white); }
