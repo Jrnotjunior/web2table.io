@@ -653,3 +653,27 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .contact-section .contact-center { color: #ED1C24; border-color: rgba(237,28,36,.55); background: #000000; }
 .contact-section .contact-center span { color: #ffffff; }
 .contact-section .orbit-node { color: #ED1C24; border-color: rgba(237,28,36,.55); background: #000000; }
+
+
+/* Hero section: enforce the approved black, white and red palette. */
+.hero { color: #ffffff; background: #000000; }
+.hero .hero-copy h1 { color: #ffffff; }
+.hero .hero-copy h1 span { color: #ED1C24; }
+.hero .hero-description { color: #d0d0d0; }
+.hero .hero-copy .eyebrow { color: #ffffff; }
+.hero .hero-note { color: #d0d0d0; }
+.hero .note-icon { color: #ED1C24; background: #000000; border-color: rgba(237,28,36,.55); }
+.hero .floating-card { color: #ffffff; border-color: rgba(255,255,255,.2); background: #000000; box-shadow: none; }
+.hero .floating-card strong, .hero .floating-card .mini-card-top { color: #ffffff; }
+.hero .floating-card small { color: #d0d0d0; }
+.hero .status-dot, .hero .mini-live, .hero .check-icon, .hero .team-check { color: #ED1C24; }
+.hero .order-icon, .hero .order-icon-orange { color: #ED1C24; border-color: rgba(237,28,36,.55); background: #000000; }
+.hero .muted-icon { color: #ffffff; }
+.hero .order-divider { border-color: rgba(255,255,255,.2); }
+.hero .team-avatars span { color: #ffffff; border-color: #000000; background: #000000; }
+.hero .team-check { color: #ffffff; background: #ED1C24; }
+.hero .visual-stamp { color: #ffffff; border-color: rgba(255,255,255,.2); background: #000000; }
+.hero .visual-stamp svg { color: #ED1C24; }
+.hero .hero-bottom { color: #d0d0d0; border-top-color: rgba(255,255,255,.2); }
+.hero .workflow-line i { background: #ED1C24; }
+.hero .workflow-line b { color: #ffffff; }
