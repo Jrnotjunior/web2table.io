@@ -713,3 +713,23 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   .main-nav a:hover, .main-nav a:focus-visible { color: #ED1C24; }
   .main-nav .nav-cta { color: #ffffff; background: #ED1C24; }
 }
+
+
+/* Workflow section finishing pass: clearer steps and consistent palette. */
+.workflow-section { color: #ffffff; background: #000000; }
+.workflow-section .workflow-copy .eyebrow { color: #ffffff; }
+.workflow-section .workflow-copy > p { color: #d0d0d0; }
+.workflow-section .workflow-footnote { color: #d0d0d0; }
+.workflow-section .workflow-footnote svg { color: #ED1C24; }
+.workflow-section .button-light { color: #ffffff; border: 1px solid #ED1C24; background: #ED1C24; transition: color .18s ease, border-color .18s ease, background .18s ease; }
+.workflow-section .button-light:hover, .workflow-section .button-light:focus-visible { color: #ffffff; border-color: #ffffff; background: #000000; }
+.workflow-section .steps-list { border-top: 1px solid rgba(255,255,255,.2); }
+.workflow-section .step-row { border-bottom-color: rgba(255,255,255,.2); }
+.workflow-section .step-index { color: #ED1C24; }
+.workflow-section .step-icon { color: #ED1C24; border: 1px solid rgba(237,28,36,.55); background: #000000; }
+.workflow-section .step-copy h3 { color: #ffffff; }
+.workflow-section .step-copy p { color: #d0d0d0; }
+.workflow-section .step-arrow { color: #ED1C24; transition: transform .18s ease, color .18s ease; }
+.workflow-section .step-row:hover .step-arrow { color: #ffffff; transform: translateX(3px); }
+.workflow-section .steps-bottom { color: #d0d0d0; }
+.workflow-section .steps-bottom-mark { color: #ffffff; background: #ED1C24; }
