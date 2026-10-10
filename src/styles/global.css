@@ -9,12 +9,12 @@
   font-optical-sizing: auto;
   font-weight: 400;
   --ink: #000000;
-  --muted: #444444;
+  --muted: #000000;
   --paper: #ffffff;
   --white: #fff;
   --green: #ED1C24;
   --green-dark: #000000;
-  --line: #e7e7e7;
+  --line: #000000;
   --serif: 'Montserrat', sans-serif;
 }
 * { box-sizing: border-box; }
@@ -25,11 +25,11 @@ button, input, textarea { font: inherit; }
 a { color: inherit; text-decoration: none; }
 button { color: inherit; }
 img { display: block; max-width: 100%; }
-::selection { color: var(--ink); background: var(--green); }
+::selection { color: var(--ink); background: #ED1C24; }
 :focus-visible { outline: 3px solid #ED1C24; outline-offset: 3px; }
 .container { width: min(1160px, calc(100% - 64px)); margin-inline: auto; }
 .section { padding: 112px 0; }
-.eyebrow { display: flex; align-items: center; gap: 9px; color: #626a5d; font-size: 11px; font-weight: 700; letter-spacing: .14em; line-height: 1.4; text-transform: uppercase; }
+.eyebrow { display: flex; align-items: center; gap: 9px; color: #000000; font-size: 11px; font-weight: 700; letter-spacing: .14em; line-height: 1.4; text-transform: uppercase; }
 .eyebrow > span { width: 7px; height: 7px; flex: 0 0 auto; border-radius: 50%; background: #ED1C24; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2, h3 { font-family: var(--serif); letter-spacing: -.055em; }
@@ -40,11 +40,11 @@ p { color: var(--muted); line-height: 1.75; }
 .button { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 11px; padding: 0 20px; border: 1px solid transparent; border-radius: 7px; font-size: 13px; font-weight: 700; transition: transform .2s ease, background .2s ease; }
 .button:hover { transform: translateY(-2px); }
 .button-dark { color: #fff; background: var(--ink); }
-.button-dark:hover { background: #354132; }
+.button-dark:hover { background: #ED1C24; }
 .button-light { color: var(--ink); background: #fff; }
-.button-light:hover { background: var(--green); }
-.button-lime { color: var(--ink); background: var(--green); }
-.button-lime:hover { background: #d8ff87; }
+.button-light:hover { background: #ED1C24; }
+.button-lime { color: var(--ink); background: #ED1C24; }
+.button-lime:hover { background: #000000; }
 .text-link { display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 700; }
 .text-link svg { transition: transform .2s ease; }
 .text-link:hover svg { transform: translateX(4px); }
