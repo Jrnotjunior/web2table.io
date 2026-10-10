@@ -184,7 +184,6 @@ p { color: var(--muted); line-height: 1.75; }
 .site-footer { color: var(--white); background: var(--black); }
 .footer-main { display: flex; justify-content: space-between; gap: 60px; padding-top: 52px; padding-bottom: 45px; }
 .brand-light { color: var(--white); }
-.brand-light > span:last-child > span { color: var(--accent); }
 .footer-brand p { margin: 13px 0 0; color: var(--text-secondary); font-size: 11px; }
 .footer-links { display: flex; gap: 85px; }
 .footer-links > div { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
@@ -265,7 +264,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 }
 /* Header colors and border are centralized in the header polish rules below. */
 .main-nav > a:not(.nav-cta), .hero-note, .hero-bottom,
-.capability-number, .step-index, .step-copy p, .solution-body li,
+.capability-number, .step-index, .step-copy p,
 .about-note small, .footer-brand p, .footer-links a,
 .footer-links > div > span, .footer-bottom {
   color: var(--white);
@@ -274,10 +273,10 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   background: var(--black);
 }
 .hero-glow { display: none; }
-.visual-image, .solution-image, .about-art > img {
+.visual-image, .about-art > img {
   background: var(--black);
 }
-.visual-image::after, .solution-image::after {
+.visual-image::after {
   background: linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.72));
 }
 .floating-card, .about-note {
@@ -295,12 +294,11 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .status-dot, .mini-live, .check-icon, .note-icon, .visual-stamp svg,
 .workflow-line i:first-child, .workflow-copy h2 span, .workflow-footnote svg,
 .step-icon, .contact-content h2 span,
-.contact-center, .orbit-node, .capability-icon, .capability-card > a,
-.solution-body li svg, .brand-word > span, .brand > span:last-child > span {
+.contact-center, .orbit-node, .capability-icon, .capability-card > a {
   color: var(--accent);
 }
 .order-divider, .capability-grid, .capability-card, .steps-list,
-.step-row, .solution-card, .footer-bottom {
+.step-row, .footer-bottom {
   border-color: rgba(255,255,255,.18);
 }
 .capability-grid { border-top-color: rgba(255,255,255,.18); border-left-color: rgba(255,255,255,.18); }
