@@ -68,7 +68,7 @@
 .section-heading h2 { margin-bottom: 0; }
 .split-heading > p { max-width: 430px; margin-bottom: 5px; font-size: 13px; }
 .platform-section { background: #fff; }
-.capability-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.capability-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .capability-card { position: relative; min-height: 230px; padding: 25px 26px 27px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .2s; }
 .capability-card:hover { background: #fbfcf7; }
 .capability-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
