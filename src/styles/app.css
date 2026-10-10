@@ -308,7 +308,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .button-light { color: #000000; background: #ffffff; }
 .button-light:hover { color: #ffffff; background: #ED1C24; }
 .button-lime { color: #ffffff; background: #ED1C24; }
-.button-lime:hover { color: #000000; background: #ffffff; }
+.button-lime:hover { color: #ffffff; background: #ED1C24; filter: brightness(.92); }
 @media (max-width: 760px) {
   .main-nav { background: #000000; border-bottom-color: rgba(255,255,255,.18); }
   .main-nav > a:not(.nav-cta) { border-bottom-color: rgba(255,255,255,.18); }
