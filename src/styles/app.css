@@ -548,3 +548,12 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   .preview-rider-summary { gap: 5px; }
   .preview-rider-summary small { width: 100%; margin-left: 0; }
 }
+
+
+/* Role-specific tabs mirror the dispatcher and rider app workflows. */
+.preview-dispatch-tabs, .preview-rider-tabs { display: flex; gap: 5px; margin-top: 17px; border-bottom: 1px solid rgba(255,255,255,.14); }
+.preview-dispatch-tabs span, .preview-rider-tabs span { padding: 9px 11px; border-bottom: 2px solid transparent; color: rgba(255,255,255,.55); font-size: 8px; font-weight: 700; }
+.preview-dispatch-tabs span.is-active, .preview-rider-tabs span.is-active { border-bottom-color: #ED1C24; color: #fff; }
+.preview-dispatch-stats { margin-top: 13px; }
+.preview-rider-tabs { margin-top: 16px; }
+.preview-rider-tabs span { flex: 1; text-align: center; }
