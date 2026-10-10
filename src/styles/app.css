@@ -313,3 +313,22 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   .main-nav { background: #000000; border-bottom-color: rgba(255,255,255,.18); }
   .main-nav > a:not(.nav-cta) { border-bottom-color: rgba(255,255,255,.18); }
 }
+
+/* Ensure readable text contrast on the approved dark sections. */
+.hero, .platform-section, .workflow-section, .solutions-section, .about-section, .contact-section, .site-footer {
+  color: #ffffff;
+}
+.hero h1, .hero h2, .hero h3, .hero p,
+.platform-section h1, .platform-section h2, .platform-section h3, .platform-section p,
+.workflow-section h1, .workflow-section h2, .workflow-section h3, .workflow-section p,
+.solutions-section h1, .solutions-section h2, .solutions-section h3, .solutions-section p,
+.about-section h1, .about-section h2, .about-section h3, .about-section p,
+.contact-section h1, .contact-section h2, .contact-section h3, .contact-section p,
+.site-footer p, .site-footer span, .site-footer small, .site-footer a {
+  color: #ffffff;
+}
+.hero strong, .platform-section strong, .workflow-section strong,
+.solutions-section strong, .about-section strong, .contact-section strong,
+.site-footer strong, .workflow-copy h2 span, .contact-content h2 span {
+  color: #ED1C24;
+}
