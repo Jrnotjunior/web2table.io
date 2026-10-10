@@ -82,19 +82,19 @@
 .workflow-layout { display: grid; grid-template-columns: .9fr 1fr; gap: 110px; align-items: center; }
 .workflow-copy .eyebrow { color: #eeeeee; }
 .workflow-copy h2 { margin-bottom: 23px; }
-.workflow-copy h2 span { color: var(--green); }
+.workflow-copy h2 span { color: #ED1C24; }
 .workflow-copy > p { max-width: 400px; margin-bottom: 26px; color: #eeeeee; font-size: 13px; }
 .workflow-footnote { display: flex; align-items: center; gap: 8px; margin-top: 24px; color: #eeeeee; font-size: 10px; }
-.workflow-footnote svg { color: var(--green); }
+.workflow-footnote svg { color: #ED1C24; }
 .steps-list { border-top: 1px solid rgba(255,255,255,.17); }
 .step-row { display: grid; grid-template-columns: 26px 44px 1fr 18px; align-items: center; gap: 16px; min-height: 115px; border-bottom: 1px solid rgba(255,255,255,.17); }
 .step-index { align-self: start; padding-top: 30px; color: #a8b69c; font-size: 10px; }
-.step-icon { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid rgba(210,236,171,.25); border-radius: 8px; color: var(--green); background: rgba(199,243,106,.08); }
+.step-icon { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid rgba(237,28,36,.4); border-radius: 8px; color: #ED1C24; background: #000000; }
 .step-copy h3 { margin-bottom: 6px; font-size: 16px; letter-spacing: -.03em; }
 .step-copy p { max-width: 290px; margin-bottom: 0; color: #c0cabb; font-size: 11px; line-height: 1.7; }
 .step-arrow { color: #b7c3ad; }
 .steps-bottom { display: flex; align-items: center; gap: 10px; padding-top: 23px; color: #eeeeee; font-size: 11px; }
-.steps-bottom-mark { width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; color: var(--ink); background: var(--green); }
+.steps-bottom-mark { width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; color: #ffffff; background: #ED1C24; }
 .centered-heading { text-align: center; }
 .centered-heading .eyebrow { justify-content: center; }
 .centered-heading h2 { margin-bottom: 17px; }
