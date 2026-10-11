@@ -187,6 +187,13 @@ p { color: var(--muted); line-height: 1.75; }
 .footer-brand p { margin: 13px 0 0; color: var(--text-secondary); font-size: 11px; }
 .footer-links { display: flex; gap: 85px; }
 .footer-links > div { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+/* Keep legal links in a horizontal row on wider screens. */
+.footer-links > div:last-child { max-width: 620px; }
+.footer-links > div:last-child a { white-space: nowrap; }
+@media (min-width: 761px) {
+  .footer-links > div:last-child { flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: 20px; row-gap: 12px; }
+  .footer-links > div:last-child > span { flex-basis: 100%; }
+}
 .footer-links > div > span { margin-bottom: 5px; color: var(--text-secondary); font-size: 9px; font-weight: 700; letter-spacing: .13em; }
 .footer-links a { display: inline-flex; align-items: center; gap: 5px; color: var(--text-secondary); font-size: 11px; transition: color .18s ease; }
 .footer-links a:hover { color: var(--accent); }
