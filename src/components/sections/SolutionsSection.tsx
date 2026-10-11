@@ -13,8 +13,8 @@ const solutions = [
 ]
 
 export default function SolutionsSection() {
-  return <section className="section solutions-section" id="solutions">
-    <div className="container">
+  return <section className="section solutions-section">
+    <div className="container" id="solutions">
       <div className="section-heading centered-heading">
         <SectionEyebrow>Built around real roles</SectionEyebrow>
         <h2>Useful for every part<br /><span>of restaurant service.</span></h2>
