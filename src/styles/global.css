@@ -784,13 +784,11 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .packages-footer .package-cta { flex: 0 0 auto; width: auto; padding-inline: 20px; }
 @media (max-width: 600px) { .packages-footer { align-items: stretch; flex-direction: column; gap: 16px; } .packages-footer .package-cta { width: 100%; } }
 
-/* Align the Packages anchor beneath the sticky navigation and reduce excess top space. */
-#packages.packages-section { scroll-margin-top: 82px; padding-top: 76px; }
-@media (max-width: 700px) { #packages.packages-section { scroll-margin-top: 70px; padding-top: 54px; } }
-
-/* Final anchor alignment: avoid stacking scroll-margin and section padding. */
+/* Packages anchor spacing: keep navigation targets aligned without excess blank space. */
 #packages.packages-section { scroll-margin-top: 0; padding-top: 36px; }
-@media (max-width: 700px) { #packages.packages-section { scroll-margin-top: 0; padding-top: 28px; } }
+@media (max-width: 700px) {
+  #packages.packages-section { padding-top: 28px; }
+}
 
 
 /* Private demo inquiry form */
