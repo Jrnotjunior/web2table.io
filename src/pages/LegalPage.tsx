@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import SiteHeader from '../components/layout/SiteHeader'
 import SiteFooter from '../components/layout/SiteFooter'
@@ -45,6 +46,9 @@ const policies: Record<string, Policy> = {
 
 export default function LegalPage() {
   const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [pathname])
   const key = pathname.replace(/^\/+|\/+$/g, '')
   const policy = policies[key] ?? policies.privacy
   return <><SiteHeader /><main className="legal-page"><div className="container legal-container"><p className="legal-kicker">WEB2TABLE · LEGAL</p><h1>{policy.title}</h1><p className="legal-updated">Draft for owner review · Last updated {policy.updated}</p><div className="legal-draft-warning" role="note"><strong>Important: review required before launch.</strong><br />These are starter drafts, not legal advice or a certification of compliance. The operator must verify all statements against the deployed website, complete missing business details, and obtain qualified legal advice before relying on them.</div><p className="legal-intro">{policy.intro}</p>{policy.sections.map((section) => <section className="legal-section" key={section.heading}><h2>{section.heading}</h2><p>{section.body}</p></section>)}</div></main><SiteFooter /></>
