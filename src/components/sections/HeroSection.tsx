@@ -1,4 +1,4 @@
-import { ArrowDownRight, ArrowRight, CalendarDays, Check, CircleCheck, Clock3, CookingPot, ShoppingBag, Sparkles } from 'lucide-react'
+import { ArrowDownRight, CalendarDays, Check, CircleCheck, Clock3, CookingPot, ShoppingBag, Sparkles } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
 export default function HeroSection() {
   return <section className="hero" id="home">
