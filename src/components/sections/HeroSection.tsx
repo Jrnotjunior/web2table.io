@@ -1,4 +1,4 @@
-import { ArrowDownRight, ArrowRight, Check, CircleCheck, Clock3, CookingPot, ShoppingBag, Sparkles } from 'lucide-react'
+import { ArrowDownRight, ArrowRight, CalendarDays, Check, CircleCheck, Clock3, CookingPot, ShoppingBag, Sparkles } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
 export default function HeroSection() {
   return <section className="hero" id="home">
@@ -9,7 +9,7 @@ export default function HeroSection() {
         <h1>More flow.<br /><span>Less juggling.</span></h1>
         <p className="hero-description">The tools behind a smoother restaurant day. Connect online orders, counter service, kitchen workflows, and delivery in one place.</p>
         <div className="hero-actions">
-          <a className="button button-dark" href="#platform">Explore the platform <ArrowRight size={17} /></a>
+          <a className="button button-dark" href="#contact">Book a Demo <CalendarDays size={17} /></a>
           <a className="text-link" href="#how-it-works">See how it works <ArrowDownRight size={17} /></a>
         </div>
         <div className="hero-note"><span className="note-icon"><CircleCheck size={16} /></span><span>Built around the way restaurant teams work.</span></div>
