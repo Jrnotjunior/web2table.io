@@ -3,7 +3,7 @@ import { CalendarDays, CookingPot, CreditCard, MoveUpRight, ShoppingBag, Store, 
 import SectionEyebrow from '../SectionEyebrow'
 import { platformUrl } from '../../content/siteContent'
 
-const bookingEmail = 'web2table.solutions@gmail.com'
+const bookingEmail = 'contact@web2table.io'
 const packageOptions = [
   'Full System',
   'Self Ordering + POS',
