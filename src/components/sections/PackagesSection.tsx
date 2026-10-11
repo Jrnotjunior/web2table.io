@@ -1,8 +1,8 @@
-import { Check, X, CalendarDays } from 'lucide-react'
+import { Check, CalendarDays } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
 
 const bookingEmail = 'web2table.solutions@gmail.com'
-const bookingLink = `mailto:${bookingEmail}?subject=${encodeURIComponent('Book a Web2Table Demo')}&body=${encodeURIComponent('Hello Web2Table team,\n\nI would like to book a private demo.\n\nPackage of interest:\nRestaurant name:\nPreferred date and time:\nNumber of locations:\nContact number:\n\nThank you.')}`
+const bookingLink = (packageName: string) => `mailto:${bookingEmail}?subject=${encodeURIComponent('Book a Web2Table Demo - ' + packageName)}&body=${encodeURIComponent('Hello Web2Table team,\n\nI would like to book a private demo for the ' + packageName + ' package.\n\nRestaurant name:\nPreferred date and time:\nNumber of locations:\nContact number:\n\nThank you.')}`
 
 const features = [
   { key: 'selfOrdering', label: 'Self Ordering' },
@@ -41,7 +41,7 @@ export default function PackagesSection() {
           <h3>{pkg.name}</h3>
           <p className="package-best-for">{pkg.bestFor}</p>
           <ul>{features.filter(feature => pkg.features[feature.key]).map(feature => <li key={feature.key}><Check size={15} aria-hidden="true" />{feature.label}</li>)}</ul>
-          <a className="button button-dark package-cta" href={`${bookingLink}&body=${encodeURIComponent('Hello Web2Table team,\n\nI would like to book a private demo for the ' + pkg.name + ' package.\n\nRestaurant name:\nPreferred date and time:\nNumber of locations:\nContact number:\n\nThank you.')}`}>Book a Demo <CalendarDays size={16} /></a>
+          <a className="button button-dark package-cta" href={bookingLink(pkg.name)}>Book a Demo <CalendarDays size={16} /></a>
         </article>)}
       </div>
       <p className="packages-note">Every package includes a one-time onboarding fee and a monthly subscription. Contact us to discuss package details and pricing during your private demo.</p>
