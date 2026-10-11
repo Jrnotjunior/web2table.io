@@ -1,4 +1,4 @@
-import { Check, CalendarDays } from 'lucide-react'
+import { Check } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
 
 const bookingEmail = 'web2table.solutions@gmail.com'
@@ -33,7 +33,7 @@ export default function PackagesSection() {
     <div className="container">
       <div className="section-heading split-heading packages-heading">
         <div><SectionEyebrow>Flexible package options</SectionEyebrow><h2>Choose the setup<br /><span>that fits your restaurant.</span></h2></div>
-        <p>From a focused POS setup to a connected restaurant platform, explore the package options and book a private walkthrough to find the right fit.</p>
+        <p>From a focused POS setup to a connected restaurant platform, explore the package options and choose what fits your restaurant.</p>
       </div>
       <div className="packages-grid">
         {packages.map((pkg, index) => <article className={`package-card${index === 0 ? ' package-card-featured' : ''}`} key={pkg.name}>
@@ -41,10 +41,9 @@ export default function PackagesSection() {
           <h3>{pkg.name}</h3>
           <p className="package-best-for">{pkg.bestFor}</p>
           <ul>{features.filter(feature => pkg.features[feature.key]).map(feature => <li key={feature.key}><Check size={15} aria-hidden="true" />{feature.label}</li>)}</ul>
-          <a className="button button-dark package-cta" href={bookingLink(pkg.name)}>Book a Demo <CalendarDays size={16} /></a>
         </article>)}
       </div>
-      <p className="packages-note">Every package includes a one-time onboarding fee and a monthly subscription. Contact us to discuss package details and pricing during your private demo.</p>
+      <div className="packages-footer"><p className="packages-note">Every package includes a one-time onboarding fee and a monthly subscription. Pricing is discussed privately so we can understand your restaurant's needs.</p><a className="button button-dark package-cta" href={bookingLink('Package consultation')}>Discuss Packages <span aria-hidden="true">→</span></a></div>
     </div>
   </section>
 }
