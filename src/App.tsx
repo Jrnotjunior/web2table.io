@@ -3,7 +3,6 @@ import SiteHeader from './components/layout/SiteHeader'
 import SiteFooter from './components/layout/SiteFooter'
 import ConsentBanner from './components/legal/ConsentBanner'
 import LegalPage from './pages/LegalPage'
-import DemoPage from './pages/DemoPage'
 import HeroSection from './components/sections/HeroSection'
 import PlatformSection from './components/sections/PlatformSection'
 import ProductShowcaseSection from './components/sections/ProductShowcaseSection'
@@ -17,5 +16,5 @@ function HomePage() {
 }
 
 export default function App() {
-  return <><Routes><Route path="/" element={<HomePage />} /><Route path="/privacy" element={<LegalPage />} /><Route path="/terms" element={<LegalPage />} /><Route path="/cookies" element={<LegalPage />} /><Route path="/refunds" element={<LegalPage />} /><Route path="/consent" element={<LegalPage />} /><Route path="/demo" element={<DemoPage />} /><Route path="*" element={<HomePage />} /></Routes><ConsentBanner /></>
+  return <><Routes><Route path="/" element={<HomePage />} /><Route path="/privacy" element={<LegalPage />} /><Route path="/terms" element={<LegalPage />} /><Route path="/cookies" element={<LegalPage />} /><Route path="/refunds" element={<LegalPage />} /><Route path="/consent" element={<LegalPage />} /><Route path="*" element={<HomePage />} /></Routes><ConsentBanner /></>
 }
