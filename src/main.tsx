@@ -6,7 +6,7 @@ import './styles/global.css'
 
 createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/web2table.io">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
