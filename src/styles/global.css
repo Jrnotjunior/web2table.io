@@ -701,7 +701,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 
 
 /* Header and navigation polish: approved black, white and red palette only. */
-.site-header { color: var(--white); background: rgba(0,0,0,.96); border-bottom: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(16px); }
+.site-header { color: var(--white); background: rgba(0,0,0,.96); border-bottom: 2px solid var(--accent); backdrop-filter: blur(16px); }
 .main-nav a { color: var(--white); transition: color .18s ease, border-color .18s ease, background .18s ease; }
 .main-nav a:hover, .main-nav a:focus-visible { color: var(--accent); }
 .main-nav .nav-cta { color: var(--white); border: 1px solid var(--accent); background: var(--accent); }
