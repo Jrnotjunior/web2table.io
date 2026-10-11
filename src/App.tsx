@@ -9,10 +9,10 @@ import ProductShowcaseSection from './components/sections/ProductShowcaseSection
 import WorkflowSection from './components/sections/WorkflowSection'
 import SolutionsSection from './components/sections/SolutionsSection'
 import AboutSection from './components/sections/AboutSection'
-import ContactSection from './components/sections/ContactSection'
+import ContactSection from './components/sections/ContactSection'\nimport PackagesSection from './components/sections/PackagesSection'
 
 function HomePage() {
-  return <><SiteHeader /><main><HeroSection /><PlatformSection /><ProductShowcaseSection /><WorkflowSection /><SolutionsSection /><AboutSection /><ContactSection /></main><SiteFooter /></>
+  return <><SiteHeader /><main><HeroSection /><PlatformSection /><ProductShowcaseSection /><WorkflowSection /><SolutionsSection /><AboutSection /><PackagesSection /><ContactSection /></main><SiteFooter /></>
 }
 
 export default function App() {
