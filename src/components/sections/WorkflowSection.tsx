@@ -1,6 +1,9 @@
 import { ArrowRight, Check, MoveUpRight } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
-import { workflowSteps as steps, platformUrl } from '../../content/siteContent'
+import { workflowSteps as steps } from '../../content/workflow'
+import { siteConfig } from '../../config/site'
+
+const platformUrl = siteConfig.platformUrl
 export default function WorkflowSection() {
   return <section className="section workflow-section">
     <div className="container workflow-layout" id="how-it-works">
