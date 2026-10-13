@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import SiteHeader from '../components/layout/SiteHeader'
 import SiteFooter from '../components/layout/SiteFooter'
 import HeroSection from '../components/sections/HeroSection'
@@ -10,6 +11,10 @@ import PackagesSection from '../components/sections/PackagesSection'
 import ContactSection from '../components/sections/ContactSection'
 
 export default function HomePage() {
+  useEffect(() => {
+    document.title = 'Web2Table | Restaurant Ordering & Management Platform'
+  }, [])
+
   return (
     <>
       <SiteHeader />
