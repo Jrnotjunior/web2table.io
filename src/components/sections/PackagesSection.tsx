@@ -1,32 +1,6 @@
 import { Check } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
-
-const bookingEmail = 'web2table.solutions@gmail.com'
-const bookingLink = (packageName: string) => `mailto:${bookingEmail}?subject=${encodeURIComponent('Book a Web2Table Demo - ' + packageName)}&body=${encodeURIComponent('Hello Web2Table team,\n\nI would like to book a private demo for the ' + packageName + ' package.\n\nRestaurant name:\nPreferred date and time:\nNumber of locations:\nContact number:\n\nThank you.')}`
-
-const features = [
-  { key: 'selfOrdering', label: 'Self Ordering' },
-  { key: 'pos', label: 'POS' },
-  { key: 'sales', label: 'Sales' },
-  { key: 'kitchen', label: 'Kitchen' },
-  { key: 'dispatch', label: 'Dispatch' },
-  { key: 'delivery', label: 'Delivery / Rider' },
-  { key: 'loyalty', label: 'Loyalty' },
-  { key: 'website', label: 'Website' },
-] as const
-
-type FeatureKey = typeof features[number]['key']
-type Package = { name: string; bestFor: string; features: Record<FeatureKey, boolean> }
-
-const packages: Package[] = [
-  { name: 'Full System', bestFor: 'Restaurants wanting the complete platform', features: { selfOrdering: true, pos: true, sales: true, kitchen: true, dispatch: true, delivery: true, loyalty: true, website: true } },
-  { name: 'Self Ordering + POS', bestFor: 'Restaurants with self-ordering and cashier service', features: { selfOrdering: true, pos: true, sales: true, kitchen: false, dispatch: false, delivery: false, loyalty: false, website: false } },
-  { name: 'POS', bestFor: 'Traditional restaurants needing POS', features: { selfOrdering: false, pos: true, sales: true, kitchen: false, dispatch: false, delivery: false, loyalty: false, website: false } },
-  { name: 'Self Ordering + POS + Kitchen', bestFor: 'Restaurants with digital ordering and kitchen workflows', features: { selfOrdering: true, pos: true, sales: true, kitchen: true, dispatch: false, delivery: false, loyalty: false, website: false } },
-  { name: 'Dispatch + Delivery', bestFor: 'Restaurants needing delivery operations', features: { selfOrdering: false, pos: false, sales: true, kitchen: false, dispatch: true, delivery: true, loyalty: false, website: false } },
-  { name: 'Self Ordering + Kitchen', bestFor: 'Restaurants without cashier POS', features: { selfOrdering: true, pos: false, sales: true, kitchen: true, dispatch: false, delivery: false, loyalty: false, website: false } },
-  { name: 'POS + Delivery', bestFor: 'Restaurants with POS and their own delivery', features: { selfOrdering: false, pos: true, sales: true, kitchen: false, dispatch: true, delivery: true, loyalty: false, website: false } },
-]
+import { packageFeatures, websitePackages } from '../../content/packages'
 
 export default function PackagesSection() {
   return <section className="section packages-section" id="packages">
@@ -36,14 +10,14 @@ export default function PackagesSection() {
         <p>From a focused POS setup to a connected restaurant platform, explore the package options and choose what fits your restaurant.</p>
       </div>
       <div className="packages-grid">
-        {packages.map((pkg, index) => <article className={`package-card${index === 0 ? ' package-card-featured' : ''}`} key={pkg.name}>
-          <div className="package-card-top"><span>PACKAGE 0{index + 1}</span>{index === 0 && <span className="package-badge">Complete platform</span>}</div>
+        {websitePackages.map((pkg, index) => <article className={`package-card${index === 0 ? ' package-card-featured' : ''}`} key={pkg.name}>
+          <div className="package-card-top"><span>PACKAGE {String(index + 1).padStart(2, '0')}</span>{index === 0 && <span className="package-badge">Complete platform</span>}</div>
           <h3>{pkg.name}</h3>
           <p className="package-best-for">{pkg.bestFor}</p>
-          <ul>{features.filter(feature => pkg.features[feature.key]).map(feature => <li key={feature.key}><Check size={15} aria-hidden="true" />{feature.label}</li>)}</ul>
+          <ul>{packageFeatures.filter(feature => pkg.features[feature.key]).map(feature => <li key={feature.key}><Check size={15} aria-hidden="true" />{feature.label}</li>)}</ul>
         </article>)}
       </div>
-      <div className="packages-footer"><p className="packages-note">Every package includes a one-time onboarding fee and a monthly subscription. Pricing is discussed privately so we can understand your restaurant's needs.</p><a className="button button-dark package-cta" href={bookingLink('Package consultation')}>Discuss Packages <span aria-hidden="true">→</span></a></div>
+      <div className="packages-footer"><p className="packages-note">Every package includes a one-time onboarding fee and a monthly subscription. Pricing is discussed privately so we can understand your restaurant's needs.</p><a className="button button-dark package-cta" href="#contact">Discuss Packages <span aria-hidden="true">→</span></a></div>
     </div>
   </section>
 }
