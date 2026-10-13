@@ -38,7 +38,11 @@ export default function ContactSection() {
       '\n\nI have reviewed the website privacy notice and agree to be contacted about this inquiry.'
     const subject = 'Private Web2Table demo inquiry - ' + String(form.get('restaurantName'))
     setEmailNotice(true)
-    window.location.href = 'mailto:' + bookingEmail + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
+    const gmailComposeUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(bookingEmail) + '&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
+    const gmailWindow = window.open(gmailComposeUrl, '_blank', 'noopener,noreferrer')
+    if (!gmailWindow) {
+      window.location.href = 'mailto:' + bookingEmail + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
+    }
   }
 
   return <section className="contact-section" id="contact">
@@ -67,9 +71,9 @@ export default function ContactSection() {
           <label className="inquiry-wide">Anything else we should know?<textarea name="details" rows={3} maxLength={1000} placeholder="Optional" /></label>
         </div>
         <label className="inquiry-consent"><input type="checkbox" required /> <span>I agree that Web2Table may use these details to respond to my inquiry. See the <a href="./privacy" target="_blank" rel="noreferrer">Privacy Notice</a>.</span></label>
-        <button className="button button-lime inquiry-submit" type="submit">Prepare Demo Request <CalendarDays size={17} /></button>
-        {emailNotice && <p className="inquiry-notice" role="status">Your email app should open with the request prepared. Please send the email to complete your inquiry. If it doesn't open, email {bookingEmail} directly.</p>}
-        <p className="inquiry-disclaimer">This form prepares an email in your own email app; it does not submit or store your details on this website.</p>
+        <button className="button button-lime inquiry-submit" type="submit">Open Gmail to Send Request <CalendarDays size={17} /></button>
+        {emailNotice && <p className="inquiry-notice" role="status">Gmail should open with your demo request prepared. Please review and send it to complete your inquiry. If Gmail does not open, email {bookingEmail} directly.</p>}
+        <p className="inquiry-disclaimer">This form opens a prepared Gmail message; it does not submit or store your details on this website. A Gmail account is required to send through Gmail.</p>
       </form>
     </div>
   </section>
