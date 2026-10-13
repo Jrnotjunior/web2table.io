@@ -3,12 +3,13 @@ import { useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import Brand from '../Brand'
 import { navigationItems } from '../../content/siteContent'
+import { getHomePath } from '../../utils/paths'
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false)
   const location = useLocation()
   const isHomePage = location.pathname === '/'
-  const homePath = window.location.hostname === 'jrnotjunior.github.io' ? '/web2table.io/' : '/'
+  const homePath = getHomePath()
   const menuButtonRef = useRef<HTMLButtonElement>(null)
   return <header className="site-header" onKeyDown={event => { if (event.key === 'Escape' && open) { setOpen(false); menuButtonRef.current?.focus() } }}>
     <div className="container header-inner">
