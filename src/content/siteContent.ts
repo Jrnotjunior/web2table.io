@@ -1,6 +1,7 @@
 import { Bike, CookingPot, CreditCard, Gift, PackageCheck, ShoppingBag, Store, Truck, Users } from 'lucide-react'
+import { siteConfig } from '../config/site'
 
-export const platformUrl = 'https://jrnotjunior.github.io/restaurant-ordering-platform/'
+export const platformUrl = siteConfig.platformUrl
 
 export const navigationItems = [
   { label: 'Platform', href: '#platform' },
