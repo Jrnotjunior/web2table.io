@@ -82,11 +82,10 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 }
 
 
-/* Official Web2Table logo asset: white backing keeps the dark mark visible on the black header. */
-.brand { display: inline-flex; align-items: center; flex: 0 0 auto; padding: 5px 8px; border-radius: 6px; background: #fff; }
-.brand-logo { display: block; width: 84px; max-width: 100%; height: auto; object-fit: contain; }
-.site-footer .brand { padding: 5px 8px; }
-.site-footer .brand-logo { width: 84px; }
+/* Use the uploaded logo directly, without a white container behind it. */
+.brand { display: inline-flex; align-items: center; flex: 0 0 auto; padding: 0; border-radius: 0; background: transparent; }
+.brand-logo { display: block; width: 100px; max-width: 100%; height: auto; object-fit: contain; background: transparent; }
+.site-footer .brand-logo { width: 100px; }
 /* Clear red navigation hover state. */
 .main-nav > a:not(.nav-cta) { transition: color .18s ease; }
 .main-nav > a:not(.nav-cta):hover,
@@ -94,7 +93,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .footer-links a:hover,
 .footer-links a:focus-visible { color: var(--accent); }
 @media (max-width: 760px) {
-  .brand-logo, .site-footer .brand-logo { width: 76px; }
+  .brand-logo, .site-footer .brand-logo { width: 88px; }
 }
 
 
