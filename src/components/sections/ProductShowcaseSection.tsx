@@ -38,15 +38,15 @@ export default function ProductShowcaseSection() {
     <div className="container">
       <div className="section-heading split-heading showcase-heading"><div><SectionEyebrow>Inside Web2Table</SectionEyebrow><h2>Meet the platform.<br /><span>See the workflow.</span></h2></div><p>Explore a preview of the tools behind restaurant operations. These interface previews are built for this website from Web2Table's actual feature areas—not stock photos or images taken from another product.</p></div>
       <div className="showcase-tabs" role="tablist" aria-label="Product interface previews" onKeyDown={event => {
-        const currentIndex = views.findIndex(view => view.id === activeView)
+        const currentIndex = productShowcaseViews.findIndex(view => view.id === activeView)
         let nextIndex = currentIndex
-        if (event.key === 'ArrowRight') nextIndex = (currentIndex + 1) % views.length
-        else if (event.key === 'ArrowLeft') nextIndex = (currentIndex - 1 + views.length) % views.length
+        if (event.key === 'ArrowRight') nextIndex = (currentIndex + 1) % productShowcaseViews.length
+        else if (event.key === 'ArrowLeft') nextIndex = (currentIndex - 1 + productShowcaseViews.length) % productShowcaseViews.length
         else if (event.key === 'Home') nextIndex = 0
-        else if (event.key === 'End') nextIndex = views.length - 1
+        else if (event.key === 'End') nextIndex = productShowcaseViews.length - 1
         else return
         event.preventDefault()
-        const nextView = views[nextIndex]
+        const nextView = productShowcaseViews[nextIndex]
         setActiveView(nextView.id)
         document.getElementById('showcase-tab-' + nextView.id)?.focus()
       }}>{productShowcaseViews.map(view => { const Icon = view.icon; return <button key={view.id} id={'showcase-tab-' + view.id} type="button" role="tab" aria-controls="showcase-panel" tabIndex={activeView === view.id ? 0 : -1} aria-selected={activeView === view.id} className={activeView === view.id ? 'showcase-tab is-active' : 'showcase-tab'} onClick={() => setActiveView(view.id)}><Icon size={16} />{view.label}</button> })}</div>
