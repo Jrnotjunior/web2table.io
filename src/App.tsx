@@ -3,8 +3,7 @@ import { Link, Routes, Route } from 'react-router-dom'
 import LegalPage from './pages/LegalPage'
 import HomePage from './pages/HomePage'
 import ConsentBanner from './components/legal/ConsentBanner'
-import SiteHeader from './components/layout/SiteHeader'
-import SiteFooter from './components/layout/SiteFooter'
+import SiteLayout from './components/layout/SiteLayout'
 
 function NotFoundPage() {
   useEffect(() => {
@@ -12,8 +11,7 @@ function NotFoundPage() {
   }, [])
 
   return (
-    <>
-      <SiteHeader />
+    <SiteLayout>
       <main className="legal-page">
         <div className="container legal-container">
           <p className="legal-kicker">WEB2TABLE</p>
@@ -22,8 +20,7 @@ function NotFoundPage() {
           <p><Link to="/">Return to the homepage</Link></p>
         </div>
       </main>
-      <SiteFooter />
-    </>
+    </SiteLayout>
   )
 }
 
