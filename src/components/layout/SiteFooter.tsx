@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 
 const socialIcons = [
-  { label: 'Facebook', src: './social-facebook.svg' },
-  { label: 'Instagram', src: './social-instagram.svg' },
-  { label: 'TikTok', src: './social-tiktok.svg' },
+  { label: 'Facebook', src: `${import.meta.env.BASE_URL}social-facebook.svg` },
+  { label: 'Instagram', src: `${import.meta.env.BASE_URL}social-instagram.svg` },
+  { label: 'TikTok', src: `${import.meta.env.BASE_URL}social-tiktok.svg` },
 ]
 
 export default function SiteFooter() {
