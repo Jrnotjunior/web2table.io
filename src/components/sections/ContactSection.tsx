@@ -3,19 +3,10 @@ import { CalendarDays, CookingPot, CreditCard, MoveUpRight, ShoppingBag, Store, 
 import SectionEyebrow from '../SectionEyebrow'
 import { platformUrl } from '../../content/siteContent'
 import { siteConfig } from '../../config/site'
+import { websitePackages } from '../../content/packages'
 import { openDemoInquiryInGmail } from '../../services/demoInquiry'
 
-const packageOptions = [
-  'Full System',
-  'Self Ordering + POS',
-  'POS',
-  'Self Ordering + POS + Kitchen',
-  'Dispatch + Delivery',
-  'Self Ordering + Kitchen',
-  'POS + Delivery',
-  'Not sure yet',
-]
-
+const packageOptions = [...websitePackages.map(pkg => pkg.name), 'Not sure yet']
 export default function ContactSection() {
   const [emailNotice, setEmailNotice] = useState(false)
 
