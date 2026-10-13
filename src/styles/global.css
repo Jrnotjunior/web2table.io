@@ -845,3 +845,70 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   .inquiry-fields { grid-template-columns: 1fr; }
   .inquiry-fields .inquiry-wide { grid-column: auto; }
 }
+
+
+/* Readability pass: make marketing copy comfortable to read at desktop and mobile sizes. */
+.hero-description { font-size: 18px; line-height: 1.8; }
+.eyebrow { font-size: 12px; }
+.button { font-size: 15px; }
+.text-link { font-size: 15px; }
+.main-nav > a:not(.nav-cta), .nav-cta { font-size: 14px; }
+.hero-note { font-size: 13px; }
+.hero-bottom { font-size: 11px; }
+.workflow-line { font-size: 12px; }
+.split-heading > p,
+.centered-heading > p,
+.workflow-copy > p,
+.about-copy > p,
+.contact-content > p { font-size: 16px; line-height: 1.8; }
+.capability-card h3 { font-size: 21px; }
+.capability-card p { font-size: 16px; line-height: 1.75; }
+.workflow-footnote, .steps-bottom { font-size: 13px; }
+.step-index { font-size: 12px; }
+.step-copy h3 { font-size: 19px; }
+.step-copy p { font-size: 15px; line-height: 1.75; }
+.about-copy h2 { font-size: clamp(38px, 4vw, 52px); }
+.contact-content h2 { font-size: clamp(38px, 4vw, 52px); }
+.contact-content > small { font-size: 13px; }
+.footer-brand p { font-size: 14px; line-height: 1.7; }
+.footer-links > div > span { font-size: 11px; }
+.footer-links a { font-size: 14px; }
+.footer-bottom { font-size: 12px; }
+.showcase-tab { font-size: 14px; }
+.showcase-eyebrow { font-size: 11px; }
+.showcase-copy p { font-size: 16px; line-height: 1.8; }
+.showcase-text-link { font-size: 14px; }
+.showcase-disclaimer { font-size: 12px; }
+.solution-role-label { font-size: 12px; }
+.solution-role-card h3 { font-size: 22px; }
+.solution-role-card p { font-size: 16px; line-height: 1.75; }
+.solution-role-card li { font-size: 14px; }
+.package-card p, .packages-heading > p { font-size: 16px; line-height: 1.8; }
+.package-card li, .package-card .package-card-top { font-size: 13px; }
+.inquiry-form > p { font-size: 15px; line-height: 1.75; }
+.inquiry-form label { font-size: 14px; }
+.inquiry-form input, .inquiry-form select, .inquiry-form textarea { font-size: 15px; }
+
+@media (max-width: 760px) {
+  .hero-description { font-size: 16px; }
+  .main-nav > a:not(.nav-cta), .nav-cta { font-size: 15px; }
+  .hero-note { font-size: 13px; }
+  .hero-bottom { font-size: 10px; }
+  .hero-bottom > span { font-size: 10px; }
+  .split-heading > p,
+  .centered-heading > p,
+  .workflow-copy > p,
+  .about-copy > p,
+  .contact-content > p { font-size: 16px; }
+  .capability-card h3 { font-size: 20px; }
+  .capability-card p { font-size: 15px; }
+  .step-copy h3 { font-size: 18px; }
+  .step-copy p { font-size: 15px; }
+  .footer-brand p { font-size: 14px; }
+  .footer-links a { font-size: 14px; }
+  .footer-bottom { font-size: 12px; }
+  .showcase-copy p { font-size: 15px; }
+  .solution-role-card h3 { font-size: 21px; }
+  .solution-role-card p { font-size: 15px; }
+  .package-card p, .packages-heading > p { font-size: 15px; }
+}
