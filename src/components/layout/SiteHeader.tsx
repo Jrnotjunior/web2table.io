@@ -10,11 +10,11 @@ export default function SiteHeader() {
   const isHomePage = location.pathname === '/'
   const homePath = window.location.hostname === 'jrnotjunior.github.io' ? '/web2table.io/' : '/'
   const menuButtonRef = useRef<HTMLButtonElement>(null)
-  return <header className="site-header">
+  return <header className="site-header" onKeyDown={event => { if (event.key === 'Escape' && open) { setOpen(false); menuButtonRef.current?.focus() } }}>
     <div className="container header-inner">
       <Brand />
       <button ref={menuButtonRef} className="mobile-menu" type="button" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen(!open)}>{open ? <X size={22} /> : <Menu size={22} />}</button>
-      <nav id="primary-navigation" className={`main-nav ${open ? 'nav-open' : ''}`} aria-label="Main navigation" onKeyDown={event => { if (event.key === 'Escape' && open) { setOpen(false); menuButtonRef.current?.focus() } }}>
+      <nav id="primary-navigation" className={`main-nav ${open ? 'nav-open' : ''}`} aria-label="Main navigation">
         {navigationItems.map(item => <a key={item.label} href={isHomePage ? item.href : `${homePath}${item.href}`} onClick={() => setOpen(false)}>{item.label}</a>)}
       </nav>
     </div>
