@@ -8,6 +8,7 @@ export const navigationItems = [
   { label: 'Solutions', href: '#solutions' },
   { label: 'About', href: '#about' },
   { label: 'Packages', href: '#packages' },
+  { label: 'Demo', href: '#contact' },
 ]
 
 export const capabilities = [
