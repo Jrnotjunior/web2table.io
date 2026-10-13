@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BarChart3, Check, ChefHat, CircleDollarSign, ClipboardList, CreditCard, ShoppingBag, Package, Search, Store, Truck, Users, UserRound, MapPin, Bike } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
 import { productShowcaseViews, type ProductShowcaseViewId } from '../../content/productShowcase'
+import { platformUrl } from '../../content/siteContent'
 
 function OwnerPreview() {
   return <div className="showcase-screen owner-preview">
@@ -51,7 +52,7 @@ export default function ProductShowcaseSection() {
         document.getElementById('showcase-tab-' + nextView.id)?.focus()
       }}>{productShowcaseViews.map(view => { const Icon = view.icon; return <button key={view.id} id={'showcase-tab-' + view.id} type="button" role="tab" aria-controls="showcase-panel" tabIndex={activeView === view.id ? 0 : -1} aria-selected={activeView === view.id} className={activeView === view.id ? 'showcase-tab is-active' : 'showcase-tab'} onClick={() => setActiveView(view.id)}><Icon size={16} />{view.label}</button> })}</div>
       <div className="showcase-feature">
-        <div className="showcase-copy"><span className="showcase-eyebrow"><i />{current.eyebrow}</span><h3>{current.title}</h3><p>{current.description}</p><a className="showcase-text-link" href="https://jrnotjunior.github.io/restaurant-ordering-platform/" target="_blank" rel="noreferrer">Explore the platform <span>↗</span></a></div>
+        <div className="showcase-copy"><span className="showcase-eyebrow"><i />{current.eyebrow}</span><h3>{current.title}</h3><p>{current.description}</p><a className="showcase-text-link" href={platformUrl} target="_blank" rel="noreferrer">Explore the platform <span>↗</span></a></div>
         <div id="showcase-panel" className="showcase-preview" role="tabpanel" aria-labelledby={'showcase-tab-' + activeView} tabIndex={0}>{activeView === 'owner' ? <OwnerPreview /> : activeView === 'pos' ? <PosPreview /> : activeView === 'kitchen' ? <KitchenPreview /> : activeView === 'customer' ? <CustomerPreview /> : activeView === 'dispatcher' ? <DispatcherPreview /> : <RiderPreview />}</div>
       </div>
       <p className="showcase-disclaimer">Interface previews for illustration. Values and orders shown are sample data, not live restaurant records.</p>
