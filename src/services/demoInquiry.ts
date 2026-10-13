@@ -48,9 +48,14 @@ export function openDemoInquiryInGmail(fields: DemoInquiryFields): void {
   const { to, subject, body } = buildDemoInquiryEmail(fields)
   const gmailComposeUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' +
     encodeURIComponent(to) + '&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
-  const gmailWindow = window.open(gmailComposeUrl, '_blank', 'noopener,noreferrer')
+  // Open first so browsers can report whether the popup was created, then sever
+  // the opener reference to prevent the new tab from controlling this page.
+  const gmailWindow = window.open(gmailComposeUrl, '_blank')
 
-  if (gmailWindow) return
+  if (gmailWindow) {
+    gmailWindow.opener = null
+    return
+  }
 
   window.location.href = 'mailto:' + encodeURIComponent(to) +
     '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
