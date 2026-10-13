@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BarChart3, Check, ChefHat, CircleDollarSign, ClipboardList, CreditCard, ShoppingBag, Package, Search, Store, Truck, Users, UserRound, MapPin, Bike } from 'lucide-react'
+import { BarChart3, Check, CircleDollarSign, ClipboardList, ShoppingBag, Package, Search, Store, Truck, Users, MapPin } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
 import { productShowcaseViews, type ProductShowcaseViewId } from '../../content/productShowcase'
 import { platformUrl } from '../../content/siteContent'
