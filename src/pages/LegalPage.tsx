@@ -5,7 +5,7 @@ import { policies } from '../content/legalPolicies'
 
 export default function LegalPage() {
   const { pathname } = useLocation()
-  const key = pathname.replace(/^\\/+|\\/+$/g, '')
+  const key = pathname.split('/').filter(Boolean).join('/')
   const policy = policies[key] ?? policies.privacy
 
   useEffect(() => {
