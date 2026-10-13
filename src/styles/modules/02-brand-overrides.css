@@ -1,0 +1,99 @@
+/* Web2Table approved brand system: black, white, and red only. */
+/* Brand tokens are defined once in the root block at the top of this file. */
+body, .site-header, .main-nav, .platform-section, .solutions-section,
+.about-section, .contact-section, .solution-card, .floating-card,
+.about-note, .capability-card, .contact-panel {
+  color: var(--white);
+  background-color: var(--black);
+}
+/* Header colors and border are centralized in the header polish rules below. */
+.main-nav > a:not(.nav-cta), .hero-note, .hero-bottom,
+.capability-number, .step-index, .step-copy p,
+.about-note small, .footer-brand p, .footer-links a,
+.footer-links > div > span, .footer-bottom {
+  color: var(--white);
+}
+.hero, .platform-section, .solutions-section, .about-section, .contact-section {
+  background: var(--black);
+}
+.hero-glow { display: none; }
+.visual-image, .about-illustration { background-color: var(--black); }
+.floating-card, .about-note {
+  border-color: rgba(255,255,255,.18);
+  color: var(--white);
+  background: var(--black);
+  box-shadow: none;
+}
+.order-icon, .order-icon-orange, .capability-icon, .step-icon,
+.about-note-icon, .contact-center, .orbit-node {
+  color: var(--accent);
+  border-color: rgba(237,28,36,.55);
+  background: var(--black);
+}
+.status-dot, .mini-live, .check-icon, .note-icon, .visual-stamp svg,
+.workflow-line i:first-child, .workflow-copy h2 span, .workflow-footnote svg,
+.step-icon, .contact-content h2 span,
+.contact-center, .orbit-node, .capability-icon, .capability-card > a {
+  color: var(--accent);
+}
+.order-divider, .capability-grid, .capability-card, .steps-list,
+.step-row, .footer-bottom {
+  border-color: rgba(255,255,255,.18);
+}
+.capability-grid { border-top-color: rgba(255,255,255,.18); border-left-color: rgba(255,255,255,.18); }
+.capability-card { background: var(--black); }
+.capability-card > a:hover { color: var(--white); background: var(--accent); }
+.step-icon { background: var(--black); }
+.step-index, .step-arrow, .muted-icon, .team-avatars span { color: var(--white); }
+.team-avatars span, .team-avatars span:nth-child(2), .team-avatars span:nth-child(3) {
+  color: var(--white);
+  border-color: var(--black);
+  background: var(--black);
+}
+.team-check, .steps-bottom-mark { color: var(--white); background: var(--accent); }
+.contact-panel { border: 1px solid rgba(255,255,255,.18); background: var(--black); }
+.contact-decoration span, .contact-orbit { border-color: rgba(255,255,255,.18); }
+.contact-center { border-color: rgba(237,28,36,.5); background: var(--black); }
+.site-footer { color: var(--white); background: var(--black); border-top: 2px solid var(--accent); }
+.nav-cta { color: var(--white); background: var(--accent); }
+.nav-cta:hover { color: var(--white); background: var(--accent); filter: brightness(.92); }
+@media (max-width: 760px) {
+  .main-nav { background: var(--black); border-bottom-color: rgba(255,255,255,.18); }
+  .main-nav > a:not(.nav-cta) { border-bottom-color: rgba(255,255,255,.18); }
+}
+
+/* Ensure readable text contrast on the approved dark sections. */
+.hero, .platform-section, .workflow-section, .solutions-section, .about-section, .contact-section, .site-footer {
+  color: var(--white);
+}
+.hero h1, .hero h2, .hero h3, .hero p,
+.platform-section h1, .platform-section h2, .platform-section h3, .platform-section p,
+.workflow-section h1, .workflow-section h2, .workflow-section h3, .workflow-section p,
+.solutions-section h1, .solutions-section h2, .solutions-section h3, .solutions-section p,
+.about-section h1, .about-section h2, .about-section h3, .about-section p,
+.contact-section h1, .contact-section h2, .contact-section h3, .contact-section p,
+.site-footer p, .site-footer span, .site-footer small, .site-footer a {
+  color: var(--white);
+}
+.hero strong, .platform-section strong, .workflow-section strong,
+.solutions-section strong, .about-section strong, .contact-section strong,
+.site-footer strong, .workflow-copy h2 span, .contact-content h2 span {
+  color: var(--accent);
+}
+
+
+/* Official Web2Table logo asset */
+.brand { display: inline-flex; align-items: center; flex: 0 0 auto; }
+.brand-logo { display: block; width: 100px; max-width: 100%; height: auto; object-fit: contain; }
+.site-footer .brand-logo { width: 100px; }
+/* Clear red navigation hover state. */
+.main-nav > a:not(.nav-cta) { transition: color .18s ease; }
+.main-nav > a:not(.nav-cta):hover,
+.main-nav > a:not(.nav-cta):focus-visible { color: var(--accent); }
+.footer-links a:hover,
+.footer-links a:focus-visible { color: var(--accent); }
+@media (max-width: 760px) {
+  .brand-logo, .site-footer .brand-logo { width: 88px; }
+}
+
+
