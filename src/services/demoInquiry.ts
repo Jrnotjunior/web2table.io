@@ -44,15 +44,14 @@ export function buildDemoInquiryEmail(fields: DemoInquiryFields) {
   return { to: siteConfig.contactEmail, subject, body }
 }
 
-export function openDemoInquiryInGmail(fields: DemoInquiryFields): boolean {
+export function openDemoInquiryInGmail(fields: DemoInquiryFields): void {
   const { to, subject, body } = buildDemoInquiryEmail(fields)
   const gmailComposeUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' +
     encodeURIComponent(to) + '&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
   const gmailWindow = window.open(gmailComposeUrl, '_blank', 'noopener,noreferrer')
 
-  if (gmailWindow) return true
+  if (gmailWindow) return
 
   window.location.href = 'mailto:' + encodeURIComponent(to) +
     '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
-  return false
 }
