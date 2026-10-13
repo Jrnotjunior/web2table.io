@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom'
+import logo from '../../web2table.png'
 
 export default function Brand({ light = false }: { light?: boolean }) {
   const location = useLocation()
@@ -6,7 +7,7 @@ export default function Brand({ light = false }: { light?: boolean }) {
   const homeHref = location.pathname === '/' ? '#home' : homePath
   return (
     <a className={`brand ${light ? 'brand-light' : ''}`} href={homeHref} aria-label="Web2Table home">
-      <img className="brand-logo" src="https://xaihajwrsvcdjisezmmc.supabase.co/storage/v1/object/public/web2table-assets/web2table%20%281%29.png" alt="Web2Table" />
+      <img className="brand-logo" src={logo} alt="Web2Table" />
     </a>
   )
 }
