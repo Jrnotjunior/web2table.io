@@ -61,7 +61,9 @@ p { color: var(--muted); line-height: 1.75; }
 
 /* Consolidated site-wide component and page styles (moved from app.css). */
 .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(255,255,255,.18); background: rgba(0,0,0,.96); backdrop-filter: blur(16px); }
-.header-inner { height: 78px; display: flex; align-items: center; justify-content: space-between; }
+.header-inner { position: relative; height: 78px; display: flex; align-items: center; justify-content: space-between; }
+/* Keep the desktop navigation visually centered while the brand stays on the left. */
+.main-nav { position: absolute; left: 50%; transform: translateX(-50%); }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 21px; font-weight: 800; letter-spacing: -.07em; }
 .main-nav { display: flex; align-items: center; gap: 32px; }
 .main-nav > a:not(.nav-cta) { color: var(--text-secondary); font-size: 12px; font-weight: 600; transition: color .2s; }
@@ -219,7 +221,7 @@ p { color: var(--muted); line-height: 1.75; }
 @media (max-width: 760px) {
   .header-inner { height: 68px; }
   .mobile-menu { display: grid; width: 42px; height: 42px; place-items: center; }
-  .main-nav { position: absolute; top: 67px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 10px 20px 20px; border-bottom: 1px solid var(--line); background: var(--paper); }
+  .main-nav { position: absolute; top: 67px; right: 0; left: 0; transform: none; display: none; align-items: stretch; gap: 0; padding: 10px 20px 20px; border-bottom: 1px solid var(--line); background: var(--paper); }
   .main-nav.nav-open { display: flex; flex-direction: column; }
   .main-nav > a:not(.nav-cta) { padding: 14px 4px; border-bottom: 1px solid var(--line); }
   .nav-cta { justify-content: center; margin-top: 14px; }
