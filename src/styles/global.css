@@ -34,7 +34,7 @@ button { color: inherit; }
 img { display: block; max-width: 100%; }
 ::selection { color: var(--ink); background: var(--accent); }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-.container { width: min(1160px, calc(100% - 64px)); margin-inline: auto; }
+.container { width: min(1600px, calc(100% - 4in)); margin-inline: auto; }
 .section { padding: 112px 0; }
 .eyebrow { display: flex; align-items: center; gap: 9px; color: var(--white); font-size: 11px; font-weight: 700; letter-spacing: .14em; line-height: 1.4; text-transform: uppercase; }
 .eyebrow > span { width: 7px; height: 7px; flex: 0 0 auto; border-radius: 50%; background: var(--accent); }
@@ -203,6 +203,10 @@ p { color: var(--muted); line-height: 1.75; }
 .footer-social-icons { display: flex; align-items: center; justify-content: center; gap: 14px; }
 .footer-social-icon { display: grid; width: 40px; height: 40px; place-items: center; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; background: #fff; }
 .footer-social-icon img { display: block; width: 25px; height: 25px; object-fit: contain; }
+@media (max-width: 1200px) {
+  .container { width: calc(100% - 64px); }
+}
+
 @media (max-width: 1000px) {
   .hero-grid { gap: 32px; }
   .hero-visual { min-height: 410px; }
