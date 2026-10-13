@@ -79,9 +79,16 @@ p { color: var(--muted); line-height: 1.75; }
 .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 38px; color: var(--text-secondary); font-size: 11px; }
 .note-icon { width: 24px; height: 24px; display: grid; place-items: center; border: 1px solid var(--black); border-radius: 50%; color: var(--accent); }
 .hero-visual { position: relative; min-height: 460px; }
-.visual-image { position: absolute; inset: 12px 0 20px 40px; overflow: hidden; border-radius: 12px 12px 90px 12px; background: var(--black); }
-.visual-image::after { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.72)); content: ''; }
-.visual-image img { width: 100%; height: 100%; object-fit: cover; }
+.visual-image { position: absolute; inset: 12px 0 20px 40px; overflow: hidden; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.18); border-radius: 12px 12px 90px 12px; background: radial-gradient(circle at 50% 48%, rgba(237,28,36,.12), transparent 38%), linear-gradient(135deg, #080808, #000 65%); }
+.workflow-orbit { position: absolute; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; aspect-ratio: 1; }
+.workflow-orbit-one { width: 58%; }
+.workflow-orbit-two { width: 38%; border-color: rgba(237,28,36,.45); }
+.workflow-core { position: relative; z-index: 1; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--accent); border-radius: 50%; color: var(--accent); background: #000; }
+.workflow-node { position: absolute; z-index: 2; width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid rgba(237,28,36,.65); border-radius: 12px; color: var(--accent); background: #000; }
+.workflow-node-top { top: 17%; left: calc(50% - 24px); }
+.workflow-node-left { left: 19%; top: calc(50% - 24px); }
+.workflow-node-right { right: 19%; top: calc(50% - 24px); }
+.workflow-node-bottom { bottom: 17%; left: calc(50% - 24px); }
 .floating-card { position: absolute; border: 1px solid rgba(255,255,255,.18); border-radius: 10px; background: rgba(255,255,255,.96); box-shadow: 0 18px 55px transparent; }
 .order-card { top: 48px; left: -12px; width: 245px; padding: 17px 16px 13px; }
 .mini-card-top { display: flex; align-items: center; gap: 6px; margin-bottom: 18px; color: var(--text-secondary); font-size: 9px; font-weight: 700; }
@@ -151,7 +158,17 @@ p { color: var(--muted); line-height: 1.75; }
 .about-section { background: var(--black); }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 90px; }
 .about-art { position: relative; min-height: 440px; }
-.about-art > img { width: 100%; height: 440px; object-fit: cover; border-radius: 10px 10px 80px 10px; }
+.about-illustration { position: relative; width: 100%; height: 440px; display: grid; place-items: center; overflow: hidden; border: 1px solid rgba(255,255,255,.18); border-radius: 10px 10px 80px 10px; background: radial-gradient(circle at center, rgba(237,28,36,.10), transparent 48%), #050505; }
+.about-illustration-ring { position: absolute; aspect-ratio: 1; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; }
+.about-illustration-ring.ring-one { width: 270px; }
+.about-illustration-ring.ring-two { width: 190px; border-color: rgba(237,28,36,.5); }
+.about-illustration-center { position: relative; z-index: 1; width: 116px; height: 116px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--accent); border-radius: 50%; color: var(--accent); background: #000; }
+.about-illustration-center strong { color: var(--white); font-size: 12px; letter-spacing: -.04em; }
+.about-node { position: absolute; z-index: 2; width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid rgba(237,28,36,.65); border-radius: 12px; color: var(--accent); background: #000; }
+.about-node.node-top { top: calc(50% - 158px); left: calc(50% - 24px); }
+.about-node.node-left { top: calc(50% - 24px); left: calc(50% - 158px); }
+.about-node.node-right { top: calc(50% - 24px); right: calc(50% - 158px); }
+.about-node.node-bottom { bottom: calc(50% - 158px); left: calc(50% - 24px); }
 .about-note { position: absolute; right: -30px; bottom: 28px; display: flex; align-items: center; gap: 12px; padding: 16px 19px; border: 1px solid rgba(255,255,255,.18); border-radius: 8px; background: var(--white); box-shadow: 0 14px 40px transparent; }
 .about-note-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 8px; color: var(--accent); background: var(--black); }
 .about-note strong, .about-note small { display: block; }
@@ -245,7 +262,7 @@ p { color: var(--muted); line-height: 1.75; }
   .capability-card h3 { font-size: 17px; }
   .workflow-layout { grid-template-columns: 1fr; gap: 42px; }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-art, .about-art > img { min-height: 330px; height: 330px; }
+  .about-art, .about-illustration { min-height: 330px; height: 330px; }
   .about-note { right: 12px; bottom: 18px; }
   .contact-section { padding: 55px 0; }
   .contact-panel { grid-template-columns: 1fr; }
@@ -291,12 +308,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   background: var(--black);
 }
 .hero-glow { display: none; }
-.visual-image, .about-art > img {
-  background: var(--black);
-}
-.visual-image::after {
-  background: linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.72));
-}
+.visual-image, .about-illustration { background-color: var(--black); }
 .floating-card, .about-note {
   border-color: rgba(255,255,255,.18);
   color: var(--white);
@@ -642,7 +654,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .about-section .about-note strong { color: var(--white); }
 .about-section .about-note small { color: var(--text-secondary); }
 .about-section .about-note-icon { color: var(--accent); border: 1px solid rgba(237,28,36,.55); background: var(--black); }
-.about-section .about-art > img { background: var(--black); }
+.about-section .about-illustration { background-color: var(--black); }
 
 
 /* Contact CTA: consistent black, white and red brand palette. */
