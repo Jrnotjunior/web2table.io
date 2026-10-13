@@ -84,7 +84,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 
 /* Use the uploaded logo directly, without a white container behind it. */
 .brand { display: inline-flex; align-items: center; flex: 0 0 auto; padding: 0; border-radius: 0; background: transparent; }
-.brand-logo { display: block; width: 68px; max-width: 100%; height: auto; object-fit: contain; background: transparent; }
+.brand-logo { display: block; width: 68px; max-width: 100%; height: auto; object-fit: contain; background: transparent; filter: contrast(3); }
 .site-footer .brand-logo { width: 80px; }
 /* Brand wordmark beside the logo. */
 .brand { gap: 12px; text-decoration: none; }
