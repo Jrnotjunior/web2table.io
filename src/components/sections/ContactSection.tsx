@@ -1,6 +1,8 @@
 import { CookingPot, CreditCard, MoveUpRight, ShoppingBag, Store, Truck } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
-import { platformUrl } from '../../content/siteContent'
+import { siteConfig } from '../../config/site'
+
+const platformUrl = siteConfig.platformUrl
 import DemoInquiryForm from './DemoInquiryForm'
 
 export default function ContactSection() {
