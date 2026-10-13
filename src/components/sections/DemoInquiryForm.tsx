@@ -43,7 +43,7 @@ export default function DemoInquiryForm() {
       <label className="inquiry-wide">Current POS or ordering setup<textarea name="currentSetup" rows={2} maxLength={500} placeholder="Optional" /></label>
       <label className="inquiry-wide">Anything else we should know?<textarea name="details" rows={3} maxLength={1000} placeholder="Optional" /></label>
     </div>
-    <label className="inquiry-consent"><input type="checkbox" required /> <span>I agree that Web2Table may use these details to respond to my inquiry. See the <Link to="/privacy" target="_blank" rel="noreferrer">Privacy Notice</Link>.</span></label>
+    <label className="inquiry-consent"><input type="checkbox" required /> <span>I understand this form prepares an email for me to review and send myself; this website does not submit or store my details. See the <Link to="/privacy" target="_blank" rel="noreferrer">Privacy Notice</Link>.</span></label>
     <button className="button button-lime inquiry-submit" type="submit">Prepare Demo Request Email <CalendarDays size={17} /></button>
     {emailNotice && <p className="inquiry-notice" role="status">Your email app should open with your demo request prepared. Review and send it to complete your inquiry. If no email app opens, email {siteConfig.contactEmail} directly.</p>}
     <p className="inquiry-disclaimer">This form prepares an email for you to review and send; it does not submit or store your details on this website.</p>
