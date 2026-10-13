@@ -1,9 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
 import LegalPage from './pages/LegalPage'
 import HomePage from './pages/HomePage'
+import ConsentBanner from './components/legal/ConsentBanner'
 
 export default function App() {
   return (
+    <>
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/privacy" element={<LegalPage />} />
@@ -12,5 +14,7 @@ export default function App() {
       <Route path="/consent" element={<LegalPage />} />
       <Route path="*" element={<HomePage />} />
     </Routes>
+    <ConsentBanner />
+    </>
   )
 }
