@@ -1,9 +1,9 @@
 import { useState, type FormEvent } from 'react'
 import { CalendarDays } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { siteConfig } from '../../config/site'
 import { openDemoInquiryInGmail } from '../../services/demoInquiry'
 import InquiryFields from './demo-inquiry/InquiryFields'
+import InquiryConfirmation from './demo-inquiry/InquiryConfirmation'
 
 
 export default function DemoInquiryForm() {
@@ -33,7 +33,7 @@ export default function DemoInquiryForm() {
     <InquiryFields />
     <label className="inquiry-consent"><input type="checkbox" required /> <span>I understand this form prepares an email for me to review and send myself; this website does not submit or store my details. See the <Link to="/privacy" target="_blank" rel="noreferrer">Privacy Notice</Link>.</span></label>
     <button className="button button-lime inquiry-submit" type="submit">Prepare Demo Request Email <CalendarDays size={17} /></button>
-    {emailNotice && <p className="inquiry-notice" role="status">Your email app should open with your demo request prepared. Review and send it to complete your inquiry. If no email app opens, email {siteConfig.contactEmail} directly.</p>}
+    <InquiryConfirmation visible={emailNotice} />
     <p className="inquiry-disclaimer">This form prepares an email for you to review and send; it does not submit or store your details on this website.</p>
   </form>
 }
