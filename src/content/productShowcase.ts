@@ -10,3 +10,5 @@ export const productShowcaseViews = [
 ] as const
 
 export type ProductShowcaseViewId = typeof productShowcaseViews[number]['id']
+
+export type ProductShowcaseView = typeof productShowcaseViews[number]
