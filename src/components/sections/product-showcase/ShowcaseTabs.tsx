@@ -1,3 +1,4 @@
+import type { KeyboardEvent } from 'react'
 import { productShowcaseViews, type ProductShowcaseViewId } from '../../../content/productShowcase'
 
 type ShowcaseTabsProps = {
@@ -6,7 +7,7 @@ type ShowcaseTabsProps = {
 }
 
 export default function ShowcaseTabs({ activeView, onChange }: ShowcaseTabsProps) {
-  function handleKeyDown(event: React.KeyboardEvent<HTMLDivElement>) {
+  function handleKeyDown(event: KeyboardEvent<HTMLDivElement>) {
     const currentIndex = productShowcaseViews.findIndex(view => view.id === activeView)
     let nextIndex = currentIndex
 
