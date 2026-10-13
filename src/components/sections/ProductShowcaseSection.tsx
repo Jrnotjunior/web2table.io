@@ -1,17 +1,7 @@
 import { useState } from 'react'
 import { BarChart3, Check, ChefHat, CircleDollarSign, ClipboardList, CreditCard, ShoppingBag, Package, Search, Store, Truck, Users, UserRound, MapPin, Bike } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
-
-const views = [
-  { id: 'owner', label: 'Owner dashboard', eyebrow: 'RESTAURANT MANAGEMENT', title: 'See the bigger picture.', description: 'A management workspace for sales, products, and employees.', icon: Store },
-  { id: 'pos', label: 'Cashier POS', eyebrow: 'POINT OF SALE', title: 'Keep counter orders moving.', description: 'A focused order screen for cashier workflows and payment handling.', icon: CreditCard },
-  { id: 'kitchen', label: 'Kitchen workflow', eyebrow: 'KITCHEN OPERATIONS', title: 'Make the next step clear.', description: 'A kitchen view centered on incoming orders, products, and quantities.', icon: ChefHat },
-  { id: 'customer', label: 'Customer ordering', eyebrow: 'ONLINE ORDERING', title: 'Make ordering easy for customers.', description: 'A customer-facing menu preview for browsing items and placing an order.', icon: UserRound },
-  { id: 'dispatcher', label: 'Dispatcher dashboard', eyebrow: 'ORDER DISPATCH', title: 'Coordinate every handoff.', description: 'A dispatch workspace for tracking pickup orders and delivery assignments.', icon: MapPin },
-  { id: 'rider', label: 'Rider dashboard', eyebrow: 'DELIVERY WORKFLOW', title: 'Keep deliveries on track.', description: 'A focused rider view for assigned deliveries and delivery status updates.', icon: Bike },
-] as const
-
-type ViewId = typeof views[number]['id']
+import { productShowcaseViews, type ProductShowcaseViewId } from '../../content/productShowcase'
 
 function OwnerPreview() {
   return <div className="showcase-screen owner-preview">
@@ -42,8 +32,8 @@ function RiderPreview() {
 }
 
 export default function ProductShowcaseSection() {
-  const [activeView, setActiveView] = useState<ViewId>('owner')
-  const current = views.find(view => view.id === activeView) ?? views[0]
+  const [activeView, setActiveView] = useState<ProductShowcaseViewId>('owner')
+  const current = productShowcaseViews.find(view => view.id === activeView) ?? productShowcaseViews[0]
   return <section className="section product-showcase-section" id="product-tour">
     <div className="container">
       <div className="section-heading split-heading showcase-heading"><div><SectionEyebrow>Inside Web2Table</SectionEyebrow><h2>Meet the platform.<br /><span>See the workflow.</span></h2></div><p>Explore a preview of the tools behind restaurant operations. These interface previews are built for this website from Web2Table's actual feature areas—not stock photos or images taken from another product.</p></div>
@@ -59,7 +49,7 @@ export default function ProductShowcaseSection() {
         const nextView = views[nextIndex]
         setActiveView(nextView.id)
         document.getElementById('showcase-tab-' + nextView.id)?.focus()
-      }}>{views.map(view => { const Icon = view.icon; return <button key={view.id} id={'showcase-tab-' + view.id} type="button" role="tab" aria-controls="showcase-panel" tabIndex={activeView === view.id ? 0 : -1} aria-selected={activeView === view.id} className={activeView === view.id ? 'showcase-tab is-active' : 'showcase-tab'} onClick={() => setActiveView(view.id)}><Icon size={16} />{view.label}</button> })}</div>
+      }}>{productShowcaseViews.map(view => { const Icon = view.icon; return <button key={view.id} id={'showcase-tab-' + view.id} type="button" role="tab" aria-controls="showcase-panel" tabIndex={activeView === view.id ? 0 : -1} aria-selected={activeView === view.id} className={activeView === view.id ? 'showcase-tab is-active' : 'showcase-tab'} onClick={() => setActiveView(view.id)}><Icon size={16} />{view.label}</button> })}</div>
       <div className="showcase-feature">
         <div className="showcase-copy"><span className="showcase-eyebrow"><i />{current.eyebrow}</span><h3>{current.title}</h3><p>{current.description}</p><a className="showcase-text-link" href="https://jrnotjunior.github.io/restaurant-ordering-platform/" target="_blank" rel="noreferrer">Explore the platform <span>↗</span></a></div>
         <div id="showcase-panel" className="showcase-preview" role="tabpanel" aria-labelledby={'showcase-tab-' + activeView} tabIndex={0}>{activeView === 'owner' ? <OwnerPreview /> : activeView === 'pos' ? <PosPreview /> : activeView === 'kitchen' ? <KitchenPreview /> : activeView === 'customer' ? <CustomerPreview /> : activeView === 'dispatcher' ? <DispatcherPreview /> : <RiderPreview />}</div>
