@@ -1,4 +1,4 @@
-import { ArrowDownRight, Check, CircleCheck, Clock3, CookingPot, ShoppingBag, Sparkles } from 'lucide-react'
+import { ArrowDownRight, Check, CircleCheck, Clock3, CookingPot, ShoppingBag, Sparkles, Store, CreditCard, Truck } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
 export default function HeroSection() {
   return <section className="hero" id="home">
@@ -15,7 +15,7 @@ export default function HeroSection() {
         <div className="hero-note"><span className="note-icon"><CircleCheck size={16} /></span><span>Built around the way restaurant teams work.</span></div>
       </div>
       <div className="hero-visual" aria-label="Illustration of connected restaurant operations">
-        <div className="visual-image"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85" alt="Restaurant staff using a point-of-sale terminal" /></div>
+        <div className="visual-image" aria-hidden="true"><div className="workflow-orbit workflow-orbit-one" /><div className="workflow-orbit workflow-orbit-two" /><div className="workflow-core"><Store size={34} /></div><span className="workflow-node workflow-node-top"><ShoppingBag size={19} /></span><span className="workflow-node workflow-node-left"><CreditCard size={19} /></span><span className="workflow-node workflow-node-right"><CookingPot size={19} /></span><span className="workflow-node workflow-node-bottom"><Truck size={19} /></span></div>
         <div className="floating-card order-card">
           <div className="mini-card-top"><span className="status-dot" />Order workflow <span className="mini-live">CONNECTED</span></div>
           <div className="order-row"><span className="order-icon"><ShoppingBag size={17} /></span><span><strong>New order</strong><small>Sent to the team</small></span><Check className="check-icon" size={17} /></div>
