@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import Brand from '../Brand'
-import { navigationItems } from '../../content/siteContent'
+import { navigationItems } from '../../content/navigation'
 import { getHomePath } from '../../utils/paths'
 
 export default function SiteHeader() {
