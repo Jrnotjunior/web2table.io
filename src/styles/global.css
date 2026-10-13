@@ -918,3 +918,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   .solution-role-card p { font-size: 15px; }
   .package-card p, .packages-heading > p { font-size: 15px; }
 }
+
+
+/* Align the demo anchor below the sticky header without leaving a large blank gap. */
+#contact.contact-section { scroll-margin-top: 0; padding-top: 24px; }
