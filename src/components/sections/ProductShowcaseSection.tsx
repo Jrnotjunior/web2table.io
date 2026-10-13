@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import SectionEyebrow from '../SectionEyebrow'
 import { productShowcaseViews, type ProductShowcaseViewId } from '../../content/productShowcase'
-import { platformUrl } from '../../content/siteContent'
+import { siteConfig } from '../../config/site'
+
+const platformUrl = siteConfig.platformUrl
 import { OwnerPreview, PosPreview, KitchenPreview, CustomerPreview, DispatcherPreview, RiderPreview } from './product-showcase/PreviewScreens'
 
 export default function ProductShowcaseSection() {
