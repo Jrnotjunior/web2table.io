@@ -1,3 +1,13 @@
+/*
+ * Global stylesheet entry point.
+ *
+ * Keep these imports in order: later modules intentionally refine or override
+ * earlier rules. In particular, do not move section/readability/final overrides
+ * earlier or consolidate repeated selectors without checking the full cascade
+ * and responsive behavior. New component-specific rules should live beside
+ * their existing section styles when practical; use the final module only for
+ * deliberate cross-section or last-mile corrections.
+ */
 @import './modules/01-foundation.css';
 @import './modules/02-brand-overrides.css';
 @import './modules/03-showcase-styles.css';
