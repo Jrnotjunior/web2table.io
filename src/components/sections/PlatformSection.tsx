@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
-import { capabilities } from '../../content/siteContent'
+import { capabilities } from '../../content/capabilities'
 export default function PlatformSection() {
   return <section className="section platform-section" id="platform">
     <div className="container">
