@@ -2,8 +2,9 @@ import { useState, type FormEvent } from 'react'
 import { CalendarDays, CookingPot, CreditCard, MoveUpRight, ShoppingBag, Store, Truck } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
 import { platformUrl } from '../../content/siteContent'
+import { siteConfig } from '../../config/site'
+import { openDemoInquiryInGmail } from '../../services/demoInquiry'
 
-const bookingEmail = 'contact@web2table.io'
 const packageOptions = [
   'Full System',
   'Self Ordering + POS',
@@ -21,28 +22,19 @@ export default function ContactSection() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const form = new FormData(event.currentTarget)
-    const fields = [
-      ['Contact person', form.get('contactName')],
-      ['Restaurant name', form.get('restaurantName')],
-      ['Email', form.get('email')],
-      ['Phone / messaging number', form.get('phone')],
-      ['Restaurant type', form.get('restaurantType')],
-      ['Number of locations', form.get('locations')],
-      ['Package of interest', form.get('package')],
-      ['Preferred demo date and time', form.get('demoTime') || 'Flexible'],
-      ['Current POS / ordering setup', form.get('currentSetup') || 'Not provided'],
-      ['Additional details', form.get('details') || 'None'],
-    ]
-    const body = 'Hello Web2Table team,\n\nI would like to arrange a private product walkthrough.\n\n' +
-      fields.map(([label, value]) => label + ': ' + String(value || '').trim()).join('\n') +
-      '\n\nI have reviewed the website privacy notice and agree to be contacted about this inquiry.'
-    const subject = 'Private Web2Table demo inquiry - ' + String(form.get('restaurantName'))
+    openDemoInquiryInGmail({
+      contactName: form.get('contactName'),
+      restaurantName: form.get('restaurantName'),
+      email: form.get('email'),
+      phone: form.get('phone'),
+      restaurantType: form.get('restaurantType'),
+      locations: form.get('locations'),
+      packageName: form.get('package'),
+      demoTime: form.get('demoTime'),
+      currentSetup: form.get('currentSetup'),
+      details: form.get('details'),
+    })
     setEmailNotice(true)
-    const gmailComposeUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(bookingEmail) + '&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
-    const gmailWindow = window.open(gmailComposeUrl, '_blank', 'noopener,noreferrer')
-    if (!gmailWindow) {
-      window.location.href = 'mailto:' + bookingEmail + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
-    }
   }
 
   return <section className="contact-section" id="contact">
@@ -72,7 +64,7 @@ export default function ContactSection() {
         </div>
         <label className="inquiry-consent"><input type="checkbox" required /> <span>I agree that Web2Table may use these details to respond to my inquiry. See the <a href="./privacy" target="_blank" rel="noreferrer">Privacy Notice</a>.</span></label>
         <button className="button button-lime inquiry-submit" type="submit">Open Gmail to Send Request <CalendarDays size={17} /></button>
-        {emailNotice && <p className="inquiry-notice" role="status">Gmail should open with your demo request prepared. Please review and send it to complete your inquiry. If Gmail does not open, email {bookingEmail} directly.</p>}
+        {emailNotice && <p className="inquiry-notice" role="status">Gmail should open with your demo request prepared. Please review and send it to complete your inquiry. If Gmail does not open, email {siteConfig.contactEmail} directly.</p>}
         <p className="inquiry-disclaimer">This form opens a prepared Gmail message; it does not submit or store your details on this website. A Gmail account is required to send through Gmail.</p>
       </form>
     </div>
