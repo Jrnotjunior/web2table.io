@@ -1,31 +1,26 @@
-import { ArrowDownRight, Check, CircleCheck, Clock3, CookingPot, ShoppingBag, Sparkles, Store, CreditCard, Truck } from 'lucide-react'
+import { ArrowDownRight, CircleCheck } from 'lucide-react'
 import SectionEyebrow from '../SectionEyebrow'
+import HeroVisual from './hero/HeroVisual'
+import HeroWorkflowStrip from './hero/HeroWorkflowStrip'
+
 export default function HeroSection() {
-  return <section className="hero" id="home">
-    <div className="hero-glow" />
-    <div className="container hero-grid">
-      <div className="hero-copy">
-        <SectionEyebrow>Restaurant operations, connected</SectionEyebrow>
-        <h1>More flow.<br /><span>Less juggling.</span></h1>
-        <p className="hero-description">The tools behind a smoother restaurant day. Connect online orders, counter service, kitchen workflows, and delivery in one place.</p>
-        <div className="hero-actions">
-          <a className="button button-dark" href="#packages">Explore Packages <ArrowDownRight size={17} /></a>
-          <a className="text-link" href="#how-it-works">See how it works <ArrowDownRight size={17} /></a>
+  return (
+    <section className="hero" id="home">
+      <div className="hero-glow" />
+      <div className="container hero-grid">
+        <div className="hero-copy">
+          <SectionEyebrow>Restaurant operations, connected</SectionEyebrow>
+          <h1>More flow.<br /><span>Less juggling.</span></h1>
+          <p className="hero-description">The tools behind a smoother restaurant day. Connect online orders, counter service, kitchen workflows, and delivery in one place.</p>
+          <div className="hero-actions">
+            <a className="button button-dark" href="#packages">Explore Packages <ArrowDownRight size={17} /></a>
+            <a className="text-link" href="#how-it-works">See how it works <ArrowDownRight size={17} /></a>
+          </div>
+          <div className="hero-note"><span className="note-icon"><CircleCheck size={16} /></span><span>Built around the way restaurant teams work.</span></div>
         </div>
-        <div className="hero-note"><span className="note-icon"><CircleCheck size={16} /></span><span>Built around the way restaurant teams work.</span></div>
+        <HeroVisual />
       </div>
-      <div className="hero-visual" aria-label="Illustration of connected restaurant operations">
-        <div className="visual-image" aria-hidden="true"><div className="workflow-orbit workflow-orbit-one" /><div className="workflow-orbit workflow-orbit-two" /><div className="workflow-core"><Store size={34} /></div><span className="workflow-node workflow-node-top"><ShoppingBag size={19} /></span><span className="workflow-node workflow-node-left"><CreditCard size={19} /></span><span className="workflow-node workflow-node-right"><CookingPot size={19} /></span><span className="workflow-node workflow-node-bottom"><Truck size={19} /></span></div>
-        <div className="floating-card order-card">
-          <div className="mini-card-top"><span className="status-dot" />Order workflow <span className="mini-live">CONNECTED</span></div>
-          <div className="order-row"><span className="order-icon"><ShoppingBag size={17} /></span><span><strong>New order</strong><small>Sent to the team</small></span><Check className="check-icon" size={17} /></div>
-          <div className="order-divider" />
-          <div className="order-row"><span className="order-icon order-icon-orange"><CookingPot size={17} /></span><span><strong>Kitchen prep</strong><small>Ready for handoff</small></span><Clock3 className="muted-icon" size={16} /></div>
-        </div>
-        <div className="floating-card team-card"><div className="team-avatars"><span>O</span><span>C</span><span>K</span></div><div><strong>One connected team</strong><small>Owner · Cashier · Kitchen</small></div><span className="team-check"><Check size={14} /></span></div>
-        <div className="visual-stamp"><Sparkles size={16} /><span>Made for<br />restaurant life</span></div>
-      </div>
-    </div>
-    <div className="container hero-bottom"><span>ONE CONNECTED WORKFLOW</span><div className="workflow-line"><i /><b>Order</b><i /><b>Prepare</b><i /><b>Handoff</b><i /></div><span>FROM FIRST CLICK TO PICKUP</span></div>
-  </section>
+      <HeroWorkflowStrip />
+    </section>
+  )
 }
