@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
-import SiteHeader from '../components/layout/SiteHeader'
-import SiteFooter from '../components/layout/SiteFooter'
+import SiteLayout from '../components/layout/SiteLayout'
 import HeroSection from '../components/sections/HeroSection'
 import PlatformSection from '../components/sections/PlatformSection'
 import ProductShowcaseSection from '../components/sections/ProductShowcaseSection'
@@ -16,8 +15,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <>
-      <SiteHeader />
+    <SiteLayout>
       <main>
         <HeroSection />
         <PlatformSection />
@@ -28,7 +26,6 @@ export default function HomePage() {
         <PackagesSection />
         <ContactSection />
       </main>
-      <SiteFooter />
-    </>
+    </SiteLayout>
   )
 }
