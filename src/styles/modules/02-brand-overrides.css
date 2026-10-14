@@ -87,7 +87,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .brand-logo { display: block; width: 35px; max-width: 100%; height: auto; object-fit: contain; background: transparent; filter: drop-shadow(0 0 1px rgba(255,255,255,.95)); }
 .site-footer .brand-logo { width: 42px; }
 /* Brand wordmark beside the logo. */
-.brand { gap: 7px; text-decoration: none; }
+.brand { gap: 2px; text-decoration: none; }
 .brand-wordmark {
   color: var(--white);
   font-family: 'Montserrat', sans-serif;
@@ -107,7 +107,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 .footer-links a:hover,
 .footer-links a:focus-visible { color: var(--accent); }
 @media (max-width: 760px) {
-  .brand { gap: 6px; }
+  .brand { gap: 2px; }
   .brand-logo { width: 32px; }
   .brand-wordmark { font-size: 22px; }
   .site-footer .brand-logo { width: 39px; }
