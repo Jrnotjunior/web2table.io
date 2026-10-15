@@ -1,6 +1,6 @@
 :root {
-  font-family: 'Montserrat', sans-serif;
-  --font-sans: 'Montserrat', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  --font-sans: 'Inter', sans-serif;
   color: var(--white);
   background: var(--black);
   font-synthesis: none;
@@ -19,7 +19,7 @@
   --text-secondary: #d0d0d0;
   --border-subtle: rgba(255,255,255,.2);
   --line: var(--border-subtle);
-  --serif: var(--font-sans);
+  --serif: 'Manrope', sans-serif;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
@@ -64,7 +64,7 @@ p { color: var(--muted); line-height: 1.75; }
 .header-inner { position: relative; height: 78px; display: flex; align-items: center; justify-content: space-between; }
 /* Keep the desktop navigation visually centered while the brand stays on the left. */
 .main-nav { position: absolute; right: 0; left: auto; transform: none; }
-.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 21px; font-weight: 800; letter-spacing: -.07em; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--white); font-family: 'Manrope', sans-serif; font-size: 21px; font-weight: 800; letter-spacing: -.07em; }
 .main-nav { display: flex; align-items: center; gap: 32px; }
 .main-nav > a:not(.nav-cta) { color: var(--text-secondary); font-size: 12px; font-weight: 600; transition: color .2s; }
 .nav-cta { min-height: 42px; display: inline-flex; align-items: center; gap: 8px; padding: 0 15px; border-radius: 6px; color: var(--white); background: var(--ink); font-size: 12px; font-weight: 700; }
