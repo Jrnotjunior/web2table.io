@@ -7,8 +7,7 @@ export default function Brand({ light = false }: { light?: boolean }) {
   const homeHref = location.pathname === '/' ? '#home' : homePath
   return (
     <a className={`brand ${light ? 'brand-light' : ''}`} href={homeHref} aria-label="Web2Table home">
-      <img className="brand-logo" src={logo} alt="" aria-hidden="true" />
-      <span className="brand-wordmark">Web<span className="brand-wordmark-number">2</span>Table</span>
+      <img className="brand-logo" src={logo} alt="Web2Table" />
     </a>
   )
 }
