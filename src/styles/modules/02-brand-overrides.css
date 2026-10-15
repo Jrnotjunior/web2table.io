@@ -124,3 +124,17 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   .site-header .brand-logo{width:48px!important;height:48px!important;}
   .site-footer .brand-logo{width:48px!important;height:48px!important;}
 }
+
+
+/* Make the uploaded Web2Table logo clearly prominent in the site header. */
+.site-header .brand-logo{
+  width:88px!important;
+  height:88px!important;
+  max-width:none!important;
+  object-fit:contain!important;
+}
+.site-footer .brand-logo{width:64px!important;height:64px!important;}
+@media(max-width:760px){
+  .site-header .brand-logo{width:68px!important;height:68px!important;}
+  .site-footer .brand-logo{width:54px!important;height:54px!important;}
+}
