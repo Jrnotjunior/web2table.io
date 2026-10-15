@@ -139,21 +139,3 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
   .site-footer .brand-logo{width:54px!important;height:54px!important;}
 }
 
-
-/* Enlarged standalone W2T logo in the marketing-site header. */
-.site-header .header-inner{height:156px!important;}
-.site-header .brand-logo{
-  width:260px!important;
-  height:136px!important;
-  max-width:none!important;
-  object-fit:contain!important;
-}
-.site-header{border-bottom:2px solid var(--accent)!important;}
-@media(max-width:760px){
-  .site-header .header-inner{height:108px!important;}
-  .site-header .brand-logo{width:180px!important;height:94px!important;}
-}
-@media(max-width:430px){
-  .site-header .header-inner{height:92px!important;}
-  .site-header .brand-logo{width:150px!important;height:80px!important;}
-}
