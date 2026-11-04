@@ -30,9 +30,15 @@ export default function SiteHeader() {
 
     const updateActiveSection = () => {
       const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 0
-      const activationLine = headerHeight + 24
-      const passedSections = sections.filter(section => section.getBoundingClientRect().top <= activationLine)
-      const active = passedSections[passedSections.length - 1] ?? sections[0]
+      const activationPosition = window.scrollY + headerHeight + 2
+      const orderedSections = [...sections].sort((a, b) =>
+        (a.getBoundingClientRect().top + window.scrollY) -
+        (b.getBoundingClientRect().top + window.scrollY)
+      )
+      const active = orderedSections.reduce<HTMLElement | null>((current, section) => {
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY
+        return sectionTop <= activationPosition ? section : current
+      }, null) ?? orderedSections[0]
       setActiveSection(current => current === active.id ? current : active.id)
     }
 
