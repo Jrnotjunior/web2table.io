@@ -123,6 +123,8 @@ p { color: var(--muted); line-height: 1.75; }
 .section-heading .eyebrow, .workflow-copy .eyebrow, .about-copy .eyebrow, .contact-content .eyebrow { margin-bottom: 21px; }
 .section-heading h2 { margin-bottom: 0; }
 .split-heading > p { max-width: 430px; margin-bottom: 5px; font-size: 13px; }
+.showcase-heading { display: block; }
+.showcase-heading > p { max-width: 620px; margin: 17px 0 0; font-size: 13px; line-height: 1.75; }
 .platform-section { background: var(--white); }
 .capability-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .capability-card { position: relative; min-height: 230px; padding: 25px 26px 27px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .2s; }
