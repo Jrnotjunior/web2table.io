@@ -1,5 +1,6 @@
 export {
   OwnerPreview,
+  CashierPreview,
   KitchenPreview,
   CustomerPreview,
   DispatcherPreview,
