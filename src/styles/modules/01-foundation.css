@@ -34,7 +34,9 @@ img { display: block; max-width: 100%; }
 ::selection { color: var(--ink); background: var(--accent); }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .container { width: min(1600px, calc(100% - 4in)); margin-inline: auto; }
-.section { padding: 112px 0; }
+.section { padding: 112px 0; border-top: 1px solid var(--border-subtle); }
+.platform-section { border-top-color: rgba(0,0,0,.14); }
+.contact-section { border-top: 1px solid var(--border-subtle); }
 .eyebrow { display: flex; align-items: center; gap: 9px; color: var(--white); font-size: 11px; font-weight: 700; letter-spacing: .14em; line-height: 1.4; text-transform: uppercase; }
 .eyebrow > span { width: 7px; height: 7px; flex: 0 0 auto; border-radius: 50%; background: var(--accent); }
 h1, h2, h3, p { margin-top: 0; }
