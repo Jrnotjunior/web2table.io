@@ -67,7 +67,7 @@ p { color: var(--muted); line-height: 1.75; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--white); font-family: 'Manrope', sans-serif; font-size: 21px; font-weight: 800; letter-spacing: -.07em; }
 .main-nav { display: flex; align-items: center; gap: 10px; }
 .main-nav > a:not(.nav-cta) { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 42px; padding: 0 16px; border: 1px solid rgba(255,255,255,.2); border-radius: 5px; color: var(--white); background: var(--black); font-size: 12px; font-weight: 600; white-space: nowrap; transition: color .2s, border-color .2s, background .2s; }
-.main-nav > a:not(.nav-cta):hover { border-color: var(--accent); color: var(--white); background: var(--black); }
+.main-nav > a:not(.nav-cta):hover { border-color: rgba(255,255,255,.2); color: var(--white); background: var(--black); }
 .main-nav > a:not(.nav-cta).is-active { border-color: var(--accent); color: var(--white); background: var(--accent); }
 .nav-cta { min-height: 42px; display: inline-flex; align-items: center; gap: 8px; padding: 0 15px; border-radius: 6px; color: var(--white); background: var(--ink); font-size: 12px; font-weight: 700; }
 .mobile-menu { display: none; border: 0; background: transparent; }
