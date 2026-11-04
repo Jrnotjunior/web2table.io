@@ -4,8 +4,8 @@ import { solutionRoles } from '../../content/solutions'
 import SolutionRoleCard from './solutions/SolutionRoleCard'
 
 export default function SolutionsSection() {
-  return <section className="section solutions-section">
-    <div className="container" id="solutions">
+  return <section className="section solutions-section" id="solutions">
+    <div className="container">
       <div className="section-heading solutions-heading">
         <SectionEyebrow>Built around real roles</SectionEyebrow>
         <h2>Useful for every part<br /><span>of restaurant service.</span></h2>
