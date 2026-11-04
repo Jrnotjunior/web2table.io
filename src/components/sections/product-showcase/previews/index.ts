@@ -1,5 +1,4 @@
 export { OwnerPreview } from './OwnerPreview'
-export { PosPreview } from './PosPreview'
 export { KitchenPreview } from './KitchenPreview'
 export { CustomerPreview } from './CustomerPreview'
 export { DispatcherPreview } from './DispatcherPreview'
