@@ -29,11 +29,11 @@ export const workflowSteps = [
   {
     number: '03',
     icon: CookingPot,
-    title: 'Kitchen prepares the order',
-    description: 'Kitchen staff review the items, organize preparation, and move the order through its kitchen stages.',
-    detail: 'The kitchen can focus on preparation while the rest of the team follows the order progress.',
-    handoff: 'Team → Kitchen',
-    points: ['Kitchen order queue', 'Preparation workflow', 'Ready-for-handoff status'],
+    title: 'Kitchen manages menu availability and preparation',
+    description: 'Kitchen staff keep menu items up to date by managing what is available or unavailable, while reviewing incoming orders and organizing preparation.',
+    detail: 'When an item is unavailable, the kitchen can reflect that in menu availability so customers and the front-of-house team have a clearer view of what can be ordered.',
+    handoff: 'Kitchen → Restaurant team',
+    points: ['Menu item availability', 'Available / unavailable status', 'Kitchen order queue', 'Preparation and handoff status'],
   },
   {
     number: '04',
