@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom'
-import logo from '../../web2table1.png'
+import logo from '../../web2table.png'
 
 export default function Brand({ light = false }: { light?: boolean }) {
   const location = useLocation()
