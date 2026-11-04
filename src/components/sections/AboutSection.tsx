@@ -4,8 +4,8 @@ import AboutIllustration from './about/AboutIllustration'
 
 export default function AboutSection() {
   return (
-    <section className="section about-section">
-      <div className="container about-grid" id="about">
+    <section className="section about-section" id="about">
+      <div className="container about-grid">
         <AboutIllustration />
         <div className="about-copy">
           <SectionEyebrow>Why Web2Table</SectionEyebrow>
