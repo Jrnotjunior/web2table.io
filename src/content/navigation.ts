@@ -1,5 +1,5 @@
 export const navigationItems = [
-  { label: 'Platform', href: '#platform' },
+  { label: 'Platform', href: '#home' },
   { label: 'Features', href: '#product-tour' },
   { label: 'Workflow', href: '#how-it-works' },
   { label: 'Solutions', href: '#solutions' },
