@@ -151,6 +151,9 @@ p { color: var(--muted); line-height: 1.75; }
 .step-arrow { color: var(--text-secondary); }
 .steps-bottom { display: flex; align-items: center; gap: 10px; padding-top: 23px; color: var(--text-secondary); font-size: 11px; }
 .steps-bottom-mark { width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; color: var(--white); background: var(--accent); }
+.solutions-heading { text-align: left; }
+.solutions-heading .eyebrow { justify-content: flex-start; }
+.solutions-heading > p { max-width: 480px; margin-left: 0; margin-right: 0; font-size: 13px; }
 .centered-heading { text-align: center; }
 .centered-heading .eyebrow { justify-content: center; }
 .centered-heading h2 { margin-bottom: 17px; }
