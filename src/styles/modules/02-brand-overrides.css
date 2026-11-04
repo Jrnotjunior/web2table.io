@@ -103,7 +103,7 @@ body, .site-header, .main-nav, .platform-section, .solutions-section,
 /* Clear red navigation hover state. */
 .main-nav > a:not(.nav-cta) { transition: color .18s ease; }
 .main-nav > a:not(.nav-cta):hover,
-.main-nav > a:not(.nav-cta):focus-visible { color: var(--accent); }
+.main-nav > a:not(.nav-cta):focus-visible { color: var(--white); }
 .footer-links a:hover,
 .footer-links a:focus-visible { color: var(--accent); }
 @media (max-width: 760px) {
