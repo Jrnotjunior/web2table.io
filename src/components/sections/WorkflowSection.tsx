@@ -9,8 +9,8 @@ export default function WorkflowSection() {
         <div className="workflow-intro">
           <SectionEyebrow>How the work moves</SectionEyebrow>
           <h2>From first click<br /><span>to finished order.</span></h2>
+          <p>See how Web2Table connects the customer, restaurant team, kitchen, dispatch, and owner in one coordinated restaurant journey.</p>
         </div>
-        <p>See how Web2Table connects the customer, restaurant team, kitchen, dispatch, and owner in one coordinated restaurant journey.</p>
       </div>
 
       <div className="workflow-overview" aria-label="Order journey">
