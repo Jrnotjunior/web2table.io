@@ -12,11 +12,9 @@ export default function ProductShowcaseSection() {
   return (
     <section className="section product-showcase-section" id="product-tour">
       <div className="container">
-        <div className="section-heading split-heading showcase-heading">
-          <div>
-            <SectionEyebrow>Inside Web2Table</SectionEyebrow>
-            <h2>Meet the platform.<br /><span>See the workflow.</span></h2>
-          </div>
+        <div className="section-heading showcase-heading">
+          <SectionEyebrow>Inside Web2Table</SectionEyebrow>
+          <h2>Meet the platform.<br /><span>See the workflow.</span></h2>
           <p>Explore a preview of the tools behind restaurant operations. These interface previews are built for this website from Web2Table's actual feature areas—not stock photos or images taken from another product.</p>
         </div>
         <ShowcaseTabs activeView={activeView} onChange={setActiveView} />
