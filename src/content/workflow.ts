@@ -4,7 +4,7 @@ import {
   CookingPot,
   Bike,
   Store,
-  ChartNoAxesCombined,
+  BarChart3,
 } from 'lucide-react'
 
 export const workflowSteps = [
@@ -55,7 +55,7 @@ export const workflowSteps = [
   },
   {
     number: '06',
-    icon: ChartNoAxesCombined,
+    icon: BarChart3,
     title: 'Owners oversee restaurant operations',
     description: 'Owners use their workspace to keep an eye on activity across their restaurant operations and branches.',
     detail: 'The operational picture brings the people and workflows together for better day-to-day oversight.',
