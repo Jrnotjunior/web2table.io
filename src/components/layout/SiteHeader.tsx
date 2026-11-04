@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { CalendarDays, GitBranch, Info, Layers, LayoutGrid, Menu, Store, X } from 'lucide-react'
 import Brand from '../Brand'
 import { navigationItems } from '../../content/navigation'
 import { getHomePath } from '../../utils/paths'
@@ -12,6 +12,14 @@ export default function SiteHeader() {
   const isHomePage = location.pathname === '/'
   const homePath = getHomePath()
   const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const navigationIcons = {
+    Platform: Store,
+    Features: LayoutGrid,
+    Workflow: GitBranch,
+    Solutions: Layers,
+    About: Info,
+    'Request a Demo': CalendarDays,
+  }
 
   useEffect(() => {
     if (!isHomePage) return
@@ -39,7 +47,8 @@ export default function SiteHeader() {
         {navigationItems.map(item => {
           const sectionId = item.href.startsWith('#') ? item.href.slice(1) : ''
           const isActive = isHomePage && activeSection === sectionId
-          return <a key={item.label} href={isHomePage ? item.href : `${homePath}${item.href}`} className={isActive ? 'is-active' : undefined} aria-current={isActive ? 'location' : undefined} onClick={() => { setOpen(false); if (isHomePage) setActiveSection(sectionId) }}>{item.label}</a>
+          const Icon = navigationIcons[item.label as keyof typeof navigationIcons]
+          return <a key={item.label} href={isHomePage ? item.href : `${homePath}${item.href}`} className={isActive ? 'is-active' : undefined} aria-current={isActive ? 'location' : undefined} onClick={() => { setOpen(false); if (isHomePage) setActiveSection(sectionId) }}><Icon size={14} strokeWidth={1.8} aria-hidden="true" /><span>{item.label}</span></a>
         })}
       </nav>
     </div>
