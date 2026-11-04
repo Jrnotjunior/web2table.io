@@ -22,9 +22,8 @@
   --serif: 'Manrope', sans-serif;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-/* Keep every in-page navigation target aligned consistently below the sticky header. */
-main section[id] { scroll-margin-top: 90px; }
+html { scroll-behavior: smooth; scroll-padding-top: 78px; }
+/* Anchor targets use one offset matching the sticky header, avoiding a doubled scroll gap. */
 body { margin: 0; min-width: 320px; }
 body, button, a { -webkit-tap-highlight-color: transparent; }
 body, button, input, textarea, select { font-family: var(--font-sans); }
@@ -50,6 +49,7 @@ p { color: var(--muted); line-height: 1.75; }
 .text-link svg { transition: transform .2s ease; }
 .text-link:hover svg { transform: translateX(4px); }
 @media (max-width: 760px) {
+  html { scroll-padding-top: 68px; }
   .container { width: min(100% - 40px, 560px); }
   .section { padding: 76px 0; }
   h1 { font-size: clamp(48px, 13vw, 72px); }
