@@ -25,9 +25,9 @@ export function buildDemoInquiryEmail(fields: DemoInquiryFields) {
     ['Phone / messaging number', clean(fields.phone)],
     ['Restaurant type', clean(fields.restaurantType)],
     ['Number of locations', clean(fields.locations)],
-    ['Package of interest', clean(fields.packageName)],
+    ['Platform plan', clean(fields.packageName, 'Complete Web2Table Platform')],
     ['Preferred demo date and time', clean(fields.demoTime, 'Flexible')],
-    ['Current POS / ordering setup', clean(fields.currentSetup, 'Not provided')],
+    ['Current ordering setup', clean(fields.currentSetup, 'Not provided')],
     ['Additional details', clean(fields.details, 'None')],
   ]
   const subject = 'Private Web2Table demo inquiry - ' + clean(fields.restaurantName, 'Restaurant')
@@ -48,8 +48,6 @@ export function openDemoInquiryInGmail(fields: DemoInquiryFields): void {
   const { to, subject, body } = buildDemoInquiryEmail(fields)
   const gmailComposeUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' +
     encodeURIComponent(to) + '&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body)
-  // Open first so browsers can report whether the popup was created, then sever
-  // the opener reference to prevent the new tab from controlling this page.
   const gmailWindow = window.open(gmailComposeUrl, '_blank')
 
   if (gmailWindow) {
