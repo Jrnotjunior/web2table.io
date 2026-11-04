@@ -28,15 +28,21 @@ export default function SiteHeader() {
       .filter((section): section is HTMLElement => section !== null)
     if (!sections.length) return
 
-    const observer = new IntersectionObserver(entries => {
-      const visible = entries
-        .filter(entry => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
-      if (visible) setActiveSection(visible.target.id)
-    }, { rootMargin: '-18% 0px -68% 0px', threshold: [0, 0.15, 0.35, 0.6] })
+    const updateActiveSection = () => {
+      const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 0
+      const activationLine = headerHeight + 24
+      const passedSections = sections.filter(section => section.getBoundingClientRect().top <= activationLine)
+      const active = passedSections[passedSections.length - 1] ?? sections[0]
+      setActiveSection(current => current === active.id ? current : active.id)
+    }
 
-    sections.forEach(section => observer.observe(section))
-    return () => observer.disconnect()
+    updateActiveSection()
+    window.addEventListener('scroll', updateActiveSection, { passive: true })
+    window.addEventListener('resize', updateActiveSection)
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection)
+      window.removeEventListener('resize', updateActiveSection)
+    }
   }, [isHomePage, location.pathname])
 
   return <header className="site-header" onKeyDown={event => { if (event.key === 'Escape' && open) { setOpen(false); menuButtonRef.current?.focus() } }}>
