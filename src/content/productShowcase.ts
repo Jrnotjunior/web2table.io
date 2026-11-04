@@ -1,7 +1,8 @@
-import { Bike, ChefHat, MapPin, Store, UserRound } from 'lucide-react'
+import { Bike, ChefHat, ClipboardList, MapPin, Store, UserRound } from 'lucide-react'
 
 export const productShowcaseViews = [
   { id: 'owner', label: 'Owner workspace', eyebrow: 'RESTAURANT MANAGEMENT', title: 'See the bigger picture.', description: 'A management workspace for branches, sales, products, and employees.', icon: Store },
+  { id: 'cashier', label: 'Cashier workspace', eyebrow: 'CUSTOMER ORDER HANDLING', title: 'Keep customer orders moving.', description: 'A focused cashier workspace for handling customer orders and service handoffs.', icon: ClipboardList },
   { id: 'kitchen', label: 'Kitchen workflow', eyebrow: 'KITCHEN OPERATIONS', title: 'Make the next step clear.', description: 'A kitchen view centered on incoming orders, products, and quantities.', icon: ChefHat },
   { id: 'customer', label: 'Customer ordering', eyebrow: 'ONLINE ORDERING', title: 'Make ordering easy for customers.', description: 'A customer-facing menu preview for browsing items and placing an order.', icon: UserRound },
   { id: 'dispatcher', label: 'Dispatcher workspace', eyebrow: 'ORDER DISPATCH', title: 'Coordinate every handoff.', description: 'A dispatch workspace for tracking pickup orders and delivery assignments.', icon: MapPin },
