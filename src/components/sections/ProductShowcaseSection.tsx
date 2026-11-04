@@ -14,8 +14,8 @@ export default function ProductShowcaseSection() {
       <div className="container">
         <div className="section-heading showcase-heading">
           <SectionEyebrow>Inside Web2Table</SectionEyebrow>
-          <h2>Meet the platform.<br /><span>See the workflow.</span></h2>
-          <p>Explore a preview of the tools behind restaurant operations. These interface previews are built for this website from Web2Table's actual feature areas—not stock photos or images taken from another product.</p>
+          <h2>Explore the workspaces.<br /><span>See the tools in action.</span></h2>
+          <p>Each workspace gives a different restaurant role access to the tools and information they need. Explore the owner, cashier, kitchen, customer, dispatcher, and rider interfaces.</p>
         </div>
         <ShowcaseTabs activeView={activeView} onChange={setActiveView} />
         <div className="showcase-feature">
