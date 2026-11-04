@@ -65,9 +65,9 @@ p { color: var(--muted); line-height: 1.75; }
 /* Keep the desktop navigation visually centered while the brand stays on the left. */
 .main-nav { position: absolute; right: 0; left: auto; transform: none; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--white); font-family: 'Manrope', sans-serif; font-size: 21px; font-weight: 800; letter-spacing: -.07em; }
-.main-nav { display: flex; align-items: center; gap: 32px; }
-.main-nav > a:not(.nav-cta) { display: inline-flex; align-items: center; min-height: 40px; padding: 0 12px; border: 1px solid transparent; border-radius: 4px; color: var(--text-secondary); font-size: 12px; font-weight: 600; transition: color .2s, border-color .2s, background .2s; }
-.main-nav > a:not(.nav-cta):hover { color: var(--white); }
+.main-nav { display: flex; align-items: center; gap: 10px; }
+.main-nav > a:not(.nav-cta) { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 42px; padding: 0 16px; border: 1px solid rgba(255,255,255,.2); border-radius: 5px; color: var(--white); background: var(--black); font-size: 12px; font-weight: 600; white-space: nowrap; transition: color .2s, border-color .2s, background .2s; }
+.main-nav > a:not(.nav-cta):hover { border-color: var(--accent); color: var(--white); background: var(--black); }
 .main-nav > a:not(.nav-cta).is-active { border-color: var(--accent); color: var(--white); background: var(--accent); }
 .nav-cta { min-height: 42px; display: inline-flex; align-items: center; gap: 8px; padding: 0 15px; border-radius: 6px; color: var(--white); background: var(--ink); font-size: 12px; font-weight: 700; }
 .mobile-menu { display: none; border: 0; background: transparent; }
@@ -246,9 +246,9 @@ p { color: var(--muted); line-height: 1.75; }
 @media (max-width: 760px) {
   .header-inner { height: 68px; }
   .mobile-menu { display: grid; width: 42px; height: 42px; place-items: center; }
-  .main-nav { position: absolute; top: 67px; right: 0; left: 0; transform: none; display: none; align-items: stretch; gap: 0; padding: 10px 20px 20px; border-bottom: 1px solid var(--line); background: var(--paper); }
+  .main-nav { position: absolute; top: 67px; right: 0; left: 0; transform: none; display: none; align-items: stretch; gap: 8px; padding: 10px 20px 20px; border-bottom: 1px solid var(--line); background: var(--paper); }
   .main-nav.nav-open { display: flex; flex-direction: column; }
-  .main-nav > a:not(.nav-cta) { min-height: 46px; padding: 0 12px; border: 1px solid transparent; border-radius: 4px; }
+  .main-nav > a:not(.nav-cta) { justify-content: flex-start; min-height: 42px; padding: 0 14px; border: 1px solid rgba(255,255,255,.2); border-radius: 5px; }
   .main-nav > a:not(.nav-cta).is-active { border-color: var(--accent); color: var(--white); background: var(--accent); }
   .nav-cta { justify-content: center; margin-top: 14px; }
   .hero { padding-top: 50px; }
