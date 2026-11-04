@@ -1,6 +1,7 @@
 import type { ProductShowcaseViewId } from '../../../content/productShowcase'
 import {
   OwnerPreview,
+  CashierPreview,
   KitchenPreview,
   CustomerPreview,
   DispatcherPreview,
@@ -14,13 +15,15 @@ type ShowcasePreviewProps = {
 export default function ShowcasePreview({ activeView }: ShowcasePreviewProps) {
   const preview = activeView === 'owner'
     ? <OwnerPreview />
-    : activeView === 'kitchen'
-      ? <KitchenPreview />
-      : activeView === 'customer'
-        ? <CustomerPreview />
-        : activeView === 'dispatcher'
-          ? <DispatcherPreview />
-          : <RiderPreview />
+    : activeView === 'cashier'
+      ? <CashierPreview />
+      : activeView === 'kitchen'
+        ? <KitchenPreview />
+        : activeView === 'customer'
+          ? <CustomerPreview />
+          : activeView === 'dispatcher'
+            ? <DispatcherPreview />
+            : <RiderPreview />
 
   return (
     <div
