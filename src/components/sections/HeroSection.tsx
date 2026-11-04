@@ -10,13 +10,13 @@ export default function HeroSection() {
       <div className="container hero-grid">
         <div className="hero-copy">
           <SectionEyebrow>Restaurant operations, connected</SectionEyebrow>
-          <h1>More flow.<br /><span>Less juggling.</span></h1>
-          <p className="hero-description">The tools behind a smoother restaurant day. Connect online orders, counter service, kitchen workflows, and delivery in one place.</p>
+          <h1>One platform.<br /><span>Every workflow.</span></h1>
+          <p className="hero-description">Connect online ordering, POS, kitchen operations, dispatch, delivery, and restaurant management in one complete platform.</p>
           <div className="hero-actions">
-            <a className="button button-dark" href="#packages">Explore Packages <ArrowDownRight size={17} /></a>
+            <a className="button button-dark" href="#product-tour">Explore the platform <ArrowDownRight size={17} /></a>
             <a className="text-link" href="#how-it-works">See how it works <ArrowDownRight size={17} /></a>
           </div>
-          <div className="hero-note"><span className="note-icon"><CircleCheck size={16} /></span><span>Built around the way restaurant teams work.</span></div>
+          <div className="hero-note"><span className="note-icon"><CircleCheck size={16} /></span><span>One complete system for your restaurant team.</span></div>
         </div>
         <HeroVisual />
       </div>
