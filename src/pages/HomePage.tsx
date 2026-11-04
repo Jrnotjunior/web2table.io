@@ -6,12 +6,11 @@ import ProductShowcaseSection from '../components/sections/ProductShowcaseSectio
 import WorkflowSection from '../components/sections/WorkflowSection'
 import SolutionsSection from '../components/sections/SolutionsSection'
 import AboutSection from '../components/sections/AboutSection'
-import PackagesSection from '../components/sections/PackagesSection'
 import ContactSection from '../components/sections/ContactSection'
 
 export default function HomePage() {
   useEffect(() => {
-    document.title = 'Web2Table | Restaurant Ordering & Management Platform'
+    document.title = 'Web2Table | Complete Restaurant Operations Platform'
   }, [])
 
   return (
@@ -23,7 +22,6 @@ export default function HomePage() {
         <WorkflowSection />
         <SolutionsSection />
         <AboutSection />
-        <PackagesSection />
         <ContactSection />
       </main>
     </SiteLayout>
