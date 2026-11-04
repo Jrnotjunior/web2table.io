@@ -9,9 +9,9 @@ export default function AboutSection() {
         <AboutIllustration />
         <div className="about-copy">
           <SectionEyebrow>Why Web2Table</SectionEyebrow>
-          <h2>Good service takes a team.<br /><span>Great tools help it click.</span></h2>
-          <p>Restaurants balance customers, orders, people, and timing all at once. Web2Table is being built to help bring those everyday moving parts together, with practical tools designed around restaurant workflows.</p>
-          <p>Our goal is simple: make the work behind a great guest experience feel more connected and manageable.</p>
+          <h2>One restaurant brand.<br /><span>Every branch connected.</span></h2>
+          <p>Whether you operate one location or several, Web2Table gives the owner a centralized view while each branch has its own dedicated storefront and operational workspace.</p>
+          <p>Branch teams focus on their own orders and day-to-day work, while owners can oversee the wider restaurant operation from one place.</p>
           <a className="text-link" href="#contact">Get to know Web2Table <ArrowRight size={17} /></a>
         </div>
       </div>
